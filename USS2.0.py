@@ -70,10 +70,10 @@ diff = [0]*50
 R_on = True
 R_off = True
 
-print("USS1.7.py started")
+print("USS2.0.py started")
 Datum = time.strftime("%Y-%m-%d %H:%M:%S")
 fobj_out = open(logfile,"a")
-fobj_out.write('\n' + "Reboot " +  Datum + " USS1.7.py started" + '\n' + '\n')
+fobj_out.write('\n' + "Reboot " +  Datum + " USS2.0.py started" + '\n' + '\n')
 fobj_out.close()
 #subprocess.call("/home/pi/US-Sensor/Status_email.sh")
 
@@ -87,7 +87,7 @@ try:
     maxTime = 0.04
 
     while True:
-        d = d + 1
+        
         u = [0]*50
         for n in range (50):
             GPIO.setup(TRIG,GPIO.OUT)
@@ -120,7 +120,8 @@ try:
             l = len(u)
             mw = sum(u)/50
             m= 0
-            time.sleep(0.1)
+            time.sleep(0.115)
+            d = d + 1
             
         while l > m:      
             diff[m] = abs((mw-u[m])/mw)
@@ -139,62 +140,78 @@ try:
         #print("L:", l)
         cpu = CPUTemperature()
         cput = float(cpu.temperature)
-       
         
-#28-01143b9d88aa
-        
+
         D = [0]*(z+1)
         D[z] = mw
         Dg = Dg + D[z]
         Dm = Dg/(z+1)
+        #print("Dm. ", Dm)
+        #print("Dg: ", Dg)
+        #print("n: ", d)
+        #print("z: ",z)
+        o = mw-Dm
+        #print("------------------------------------ o:", o)
+        #print("--------------------------")
+
+       
         
-        if z > 8:
-            print("n=:", d)
+#28-01143b9d88aa
+        
+        if z > 8:                                     #bereinigter Mittelwert aus 10*50 US-Messungen wird gespeichert
+            print("----------------------------------------- n: ", d, "Mittelwert: ", Dm)
+            print()
             Datum = time.strftime("%Y-%m-%d %H:%M:%S")
             cpu = CPUTemperature()
             fobj_out = open(logfile,"a")
             fobj_out.write(Datum + " n=: " + str(d) + " Mittelwert: " +  str(Dm)+ "  CPU_temp: " + str(cpu.temperature) + " C " + '\n')
             fobj_out.close()
-            #Ventilsteuerung:
-            if mw > 10:        
-                if R_on:
-                    print("Ventil: OFF")
-                    Datum = time.strftime("%Y-%m-%d %H:%M:%S")
-                    cpu = CPUTemperature()
-                    fobj_out = open(filename,"a")
-                    fobj_out.write(Datum + " n=: " + str(n) + ": Relais OFF!!!  " + "Distanz: " + str(mw) + " CPU_temp: " + str(cpu.temperature) + "C"  + '\n')
-                    fobj_out.close()
-                    time.sleep(0.1)
-                     
-      
-                    
-                    R_on = False
-                    R_off = True
-                
-                    
-                    
-            
-               
-            if mw < 10:
-                if R_off:
-                    print("R_OFF")
-                    Datum = time.strftime("%Y-%m-%d %H:%M:%S")
-                    cpu = CPUTemperature()
-                    fobj_out = open(filename,"a")
-                    fobj_out.write(Datum + " n=: " + str(n) +  ": Relais ON!!!  " + "Distanz: " +  str(mw) + "  CPU_temp: " + str(cpu.temperature) + "C"  + '\n')
-                    fobj_out.close()
-                    time.sleep(0.1)
-                                       
-                    
-                    R_on = True
-                    R_off = False
-            
             z = 0
             Dg = 0
             Dm = 0
         else:
             z = z + 1
 
+
+
+
+
+
+        #Ventilsteuerung:
+        if mw > 10:                                   #check alle 50 Messungen
+            if R_on:
+                print("Ventil: OFF")
+                Datum = time.strftime("%Y-%m-%d %H:%M:%S")
+                cpu = CPUTemperature()
+                fobj_out = open(filename,"a")
+                fobj_out.write(Datum + " n=: " + str(d) + ": Ventil OFF!!!  " + "Distanz: " + str(mw) + " CPU_temp: " + str(cpu.temperature) + "C"  + '\n')
+                fobj_out.close()
+                time.sleep(0.1)
+                 
+  
+                
+                R_on = False
+                R_off = True
+            
+                
+                
+        
+           
+        if mw < 10:
+            if R_off:
+                print("Ventil_ON")
+                Datum = time.strftime("%Y-%m-%d %H:%M:%S")
+                cpu = CPUTemperature()
+                fobj_out = open(filename,"a")
+                fobj_out.write(Datum + " n=: " + str(d) +  ": Ventil ON!!!  " + "Distanz: " +  str(mw) + "  CPU_temp: " + str(cpu.temperature) + "C"  + '\n')
+                fobj_out.close()
+                time.sleep(0.1)
+                                   
+                
+                R_on = True
+                R_off = False
+        
+       
 
         
 
@@ -209,6 +226,7 @@ except KeyboardInterrupt:
   
     GPIO.cleanup()
     sys.exit()
+
 
 
 
