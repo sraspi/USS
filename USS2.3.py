@@ -8,18 +8,8 @@ from queue import Queue
 import RPi.GPIO as GPIO
 import time
 import sys
-
 import os
-
-import RPi.GPIO as GPIO 
-import time
-import sys
-import signal
 from gpiozero import CPUTemperature
-import subprocess
-import os
-import smbus2
-import bme280
 
 
 #Kernelmodule laden
@@ -47,9 +37,6 @@ import smbus2
 import bme280
 
 temperature,pressure,humidity = bme280.readBME280All()
-print("Temperature : ", temperature, "C")
-print( "Pressure : ", pressure, "hPa")
-print( "Humidity : ", humidity, "%")
 
 
 #GPIO Pins zuweisen
@@ -146,7 +133,7 @@ try:
             l = len(u)
             mw = sum(u)/10
             m= 0
-            time.sleep(0.1)
+            time.sleep(1)
             d = d + 1
             
         while l > m:      
@@ -162,7 +149,7 @@ try:
                 
 
         mw = sum(u)/len(u)
-        #print("Mittelwert bereinigt", mw)
+       
         print("L:", l)
         if l < 5:
             print(l)
@@ -198,9 +185,9 @@ try:
         
         print()
         print()
-        print("Tm:", Tm)
-        print("Pm:", Pm)
-        print("Hm", Hm)
+        #print("Tm:", round(Tm, 1))
+        #print("Pm:", round(Pm, 1))
+        #print("Hm", round(Hm, 1))
         
 
         
@@ -210,14 +197,14 @@ try:
 #28-01143b9d88aa
         
         if z > 60:                                     #bereinigter Mittelwert aus 10*50 US-Messungen wird gespeichert
-            print("----------------------------------------- n: ", d, "Mittelwert: ", Dm)
+            print("----------------------------------------- n: ", d, "Mittelwert: ", round(Dm, 1))
             
 
             print()
             Datum = time.strftime("%Y-%m-%d %H:%M:%S")
             cpu = CPUTemperature()
             fobj_out = open(logfile,"a")
-            fobj_out.write(Datum + " n=: " + str(d) + " Mittelwert: " +  str(Dm)+ "  CPU_temp: " + str(cpu.temperature) + " C " + " T: " + str(Tm) + " P: " + str(Pm) + " Hm:" + str(Hm) + '\n')
+            fobj_out.write(Datum + " n=: " + str(d) + " Mittelwert: " +  str(round(Dm, 1))+ "  CPU_temp: " + str(round(cpu.temperature, 1)) + " C " + " T: " + str(round(Tm, 2)) + " P: " + str(round(Pm, 1)) + " Hm:" + str(round(Hm,1)) + '\n')
             fobj_out.close()
             z = 0
             Dg = 0

@@ -164,9 +164,9 @@ def main():
 
   temperature,pressure,humidity = readBME280All()
 
-  print("Temperature : ", temperature, "C")
-  print("Pressure : ", pressure, "hPa")
-  print("Humidity : ", humidity, "%")
+  #print("Temperature : ", temperature, "C")
+  #print("Pressure : ", pressure, "hPa")
+  #print("Humidity : ", humidity, "%")
 
 if __name__=="__main__":
    main()
