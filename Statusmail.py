@@ -1,6 +1,5 @@
 from __future__ import unicode_literals
 import subprocess
-import youtube_dl
 import urllib
 import shutil
 import os
@@ -17,7 +16,7 @@ while True:
 #E-Mail an sraspi21@gmail.com:
   print("E-Mail wird erstellt")
   Inhalt = ("logfile.txt")
-  Betreff = str("USS is working")
+  Betreff = str("l < 10")
   sender_email = "sraspi21@gmail.com"
   receiver_email = "sraspi21@gmail.com"
   password = "StJ19gmail"
@@ -33,7 +32,7 @@ while True:
   # Add body to email
   message.attach(MIMEText(Inhalt, "plain"))
 
-  filename = "/home/pi/US-Sensor/Entfernung.txt" # In same directory as script
+  filename = "/home/pi/US-Sensor/logfile.txt" # In same directory as script
        
   # Open PDF file in binary mode
   with open(filename, "rb") as attachment:
@@ -48,7 +47,7 @@ while True:
 
         
     # Add header as key/value pair to attachment part
-    part.add_header("Content-Disposition", "attachment; filename=Entfernung.txt",)
+    part.add_header("Content-Disposition", "attachment; filename=logfile.txt",)
     # Add attachment to message and convert message to string
     message.attach(part)
     text = message.as_string()
