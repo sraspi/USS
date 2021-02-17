@@ -1,7 +1,0 @@
-
-Reboot 2021-02-17 19:25:49 USS2.6.py started
-
-2021-02-17 19:27:34 n=: 80 Mittelwert: 4.2  CPU_temp: 24.5 C  T: 7.2 P: 1017.6 Hm:81.9
-2021-02-17 19:28:55 n=: 160 Mittelwert: 4.3  CPU_temp: 23.9 C  T: 6.98 P: 1017.6 Hm:82.7
-2021-02-17 19:30:16 n=: 240 Mittelwert: 4.3  CPU_temp: 23.9 C  T: 6.92 P: 1017.6 Hm:83.4
-2021-02-17 19:31:38 n=: 320 Mittelwert: 4.3  CPU_temp: 23.9 C  T: 7.02 P: 1017.6 Hm:83.4

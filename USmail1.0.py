@@ -1,5 +1,6 @@
 from __future__ import unicode_literals
 import subprocess
+import numpy as np
 import urllib
 import shutil
 import os
@@ -12,13 +13,37 @@ from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
+x1 = []
+x2 = []
+x3 = []
+Dateiname = "/home/pi/US-Sensor/logfile.txt"
+
 while True:
-#E-Mail an sraspi21@gmail.com:
+#E-Mail an stefan.taubert.apweiler@gmail.com:
+
+  x1 = np.genfromtxt(Dateiname,skip_header=3,usecols=(10))
+  last = len(x1)
+  Temp = str((x1[last-1]))
+  t = (Temp + " C ")
+  print(t)
+
+  x2 = np.genfromtxt(Dateiname,skip_header=3,usecols=(12))
+  last = len(x2)
+  Pressure = str(x2[last-1])
+  p = (str(Pressure) + "   ")
+  print(p)
+  
+  x3 = np.genfromtxt(Dateiname,skip_header=3,usecols=(14))
+  last = len(x3)
+  Humidity = str(x3[last-1])
+  h = (Humidity + "   ")
+  print(h)
+
   print("E-Mail wird erstellt")
-  Inhalt = ("logfile.txt")
-  Betreff = str("USS: l < 5")
+  Inhalt = "Temp-Daten"
+  Betreff = (t + p +h)
   sender_email = "sraspi21@gmail.com"
-  receiver_email = "sraspi21@gmail.com"
+  receiver_email = "stefan.taubert.apweiler@gmail.com"
   password = "StJ19gmail"
   #password = input("Type your password and press enter:")
 
@@ -61,3 +86,4 @@ while True:
   print("E-mail sent")
   
   sys.exit()
+

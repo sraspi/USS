@@ -214,7 +214,7 @@ try:
             Datum = time.strftime("%Y-%m-%d %H:%M:%S")
             cpu = CPUTemperature()
             fobj_out = open(logfile,"a")
-            fobj_out.write(Datum + " n=: " + str(d) + " Mittelwert: " +  str(round(Dm, 1))+ "  CPU_temp: " + str(round(cpu.temperature, 1)) + " C " + " T: " + str(round(Tm, 2)) + " P: " + str(round(Pm, 1)) + " Hm:" + str(round(Hm,1)) + '\n')
+            fobj_out.write(Datum + " n=: " + str(d) + " Mittelwert: " +  str(round(Dm, 1))+ "  CPU_temp: " + str(round(cpu.temperature, 1)) + " C " + " T: " + str(round(Tm, 2)) + " P: " + str(round(Pm, 1)) + " Hm: " + str(round(Hm,1)) + '\n')
             fobj_out.close()
             z = 0
             Dg = 0
