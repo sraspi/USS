@@ -16,7 +16,7 @@ while True:
 #E-Mail an sraspi21@gmail.com:
   print("E-Mail wird erstellt")
   Inhalt = ("logfile.txt")
-  Betreff = str("l < 10")
+  Betreff = str("USS: l < 5")
   sender_email = "sraspi21@gmail.com"
   receiver_email = "sraspi21@gmail.com"
   password = "StJ19gmail"
