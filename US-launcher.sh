@@ -2,4 +2,4 @@
 #US-laucher.sh
 cd /
 cd /home/pi/US-Sensor
-python3 USS2.3.py
+python3 USS2.6.py
