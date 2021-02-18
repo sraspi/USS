@@ -1,0 +1,2 @@
+2021-02-17 21:27:14 n=: 10: Ventil OFF!!!  Distanz: 4.218  CPU_temp: 27.172C
+2021-02-17 23:59:59 n=: 10: Ventil OFF!!!  Distanz: 4.202222222222222  CPU_temp: 25.02C
