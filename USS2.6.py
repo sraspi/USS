@@ -40,8 +40,7 @@ temperature,pressure,humidity = bme280.readBME280All()
 
 
 #GPIO Pins zuweisen
-# GPIO22(bl) > Relais fuer 12V Ventil
-# GPIO14()   > Luefter
+
 GPIO.setup(22, GPIO.OUT)
 GPIO.output(22, GPIO.LOW)
 GPIO.setup(27, GPIO.OUT)
@@ -71,6 +70,7 @@ Tg = 0
 Pg = 0
 Hg = 0
 diff = [0]*10
+L = 0
 
 R_on = True
 R_off = True
@@ -80,8 +80,6 @@ Datum = time.strftime("%Y-%m-%d %H:%M:%S")
 fobj_out = open(logfile,"a")
 fobj_out.write('\n' + "Reboot " +  Datum + " USS2.6.py started" + '\n' + '\n')
 fobj_out.close()
-#subprocess.call("/home/pi/US-Sensor/Status_email.sh")
-
 
 try:
     GPIO.setmode(GPIO.BCM)
@@ -94,21 +92,17 @@ try:
     while True:
 
         #Lueftersteuerung cpu:
-        
+
         cpu = CPUTemperature()
         cput = float(cpu.temperature)
-        if cput < 20:
-            print("CPU-Luefter OFF")
-            GPIO.output(27, GPIO.HIGH) #Luefter
-        else:
-            if cput > 25:
-                print("CPU-Luefter ON")
-                print(float(cpu.temperature))
-                GPIO.output(27, GPIO.HIGH)
+        print("Luefter ON")
+        GPIO.output(27, GPIO.HIGH) #Luefter
 
 
 
-        
+
+
+
         u = [0]*10
         for n in range (10):
             GPIO.setup(TRIG,GPIO.OUT)
@@ -160,7 +154,7 @@ try:
 
         mw = sum(u)/len(u)
        
-        print("L:", l)
+        print("l: ", l)
         if l < 5:
             print(l)
             subprocess.call("/home/pi/US-Sensor/Status_email.sh") 
@@ -186,18 +180,21 @@ try:
         
 
         Dm = Dg/(z+1)
-        Tm = Tg/(z+1)-1.4
-        Pm = Pg/(z+1)+21
-        Hm = Hg/(z+1)+11
+        Tm = Tg/(z+1) + 0.3
+        Pm = Pg/(z+1) + 21
+        Hm = Hg/(z+1) - 3
         
         o = mw-Dm
         
         
         print()
-        print()
-        #print("Tm:", round(Tm, 1))
-        #print("Pm:", round(Pm, 1))
-        #print("Hm", round(Hm, 1))
+        print(("D: "), D[z])
+        print("T:", round((temperature + 0.3), 2))
+        print("P:", round((pressure + 21), 2))
+        print("H", round((humidity - 3), 2))
+        print(("n: "), z)
+        
+        
         
 
         
@@ -239,7 +236,7 @@ try:
         #Ventilsteuerung:
         if mw > 10:                                   #check alle 50 Messungen
             if R_on:
-                GPIO.output(22, GPIO.HIGH)
+                GPIO.output(22, GPIO.LOW)
                 print("Ventil: ON")
                 Datum = time.strftime("%Y-%m-%d %H:%M:%S")
                 cpu = CPUTemperature()
@@ -281,7 +278,7 @@ try:
 
 except KeyboardInterrupt:
     fobj_out = open("/home/pi/US-Sensor/logfile.txt","a")
-    fobj_out.write(Datum + " keyboard.interrupt: " + " n: " + str(n) + " CPU_temp: " + str(cpu.temperature) + "C" +  '\n')
+    fobj_out.write(Datum + " keyboard.interrupt: " + " n: " + str(n) + " CPU_temp: " + str(cpu.temperature) + "C" + " Mw: " + str(mw) + '\n')
     fobj_out.close()
     print("process terminated")
   

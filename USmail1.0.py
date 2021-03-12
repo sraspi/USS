@@ -40,7 +40,7 @@ while True:
   print(h)
 
   print("E-Mail wird erstellt")
-  Inhalt = "Temp-Daten"
+  Inhalt = "USS Temp-Daten"
   Betreff = (t + p +h)
   sender_email = "sraspi21@gmail.com"
   receiver_email = "stefan.taubert.apweiler@gmail.com"

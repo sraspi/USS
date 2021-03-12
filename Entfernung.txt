@@ -1,12 +1,5 @@
-2021-02-17 21:27:14 n=: 10: Ventil OFF!!!  Distanz: 4.218  CPU_temp: 27.172C
-2021-02-17 23:59:59 n=: 10: Ventil OFF!!!  Distanz: 4.202222222222222  CPU_temp: 25.02C
-2021-02-18 08:53:31 n=: 31480: Ventil ON!!!  Distanz: 16.753999999999998 CPU_temp: 21.792C
-2021-02-18 08:53:41 n=: 31490: Ventil OFF!!!  Distanz: 4.163333333333333  CPU_temp: 22.33C
-2021-02-18 09:02:50 n=: 32030: Ventil ON!!!  Distanz: 23.710000000000004 CPU_temp: 21.792C
-2021-02-18 09:03:01 n=: 32040: Ventil OFF!!!  Distanz: 4.151  CPU_temp: 22.33C
-2021-02-18 23:59:50 n=: 10: Ventil OFF!!!  Distanz: 5.344285714285715  CPU_temp: 21.254C
-2021-02-19 23:33:40 n=: 83430: Ventil ON!!!  Distanz: 21.69 CPU_temp: 22.868C
-2021-02-19 23:33:50 n=: 83440: Ventil OFF!!!  Distanz: 4.968999999999999  CPU_temp: 22.33C
-2021-02-19 23:59:51 n=: 10: Ventil OFF!!!  Distanz: 4.848  CPU_temp: 25.02C
-2021-02-20 11:40:22 n=: 41330: Ventil ON!!!  Distanz: 20.014 CPU_temp: 27.71C
-2021-02-20 11:40:32 n=: 41340: Ventil OFF!!!  Distanz: 4.784  CPU_temp: 27.172C
+2021-03-11 17:52:25 n=: 10: Ventil ON!!!  Distanz: 85.47222222222223 CPU_temp: 26.096C
+2021-03-11 18:11:09 n=: 10: Ventil ON!!!  Distanz: 85.417 CPU_temp: 22.868C
+2021-03-11 18:25:51 n=: 10: Ventil ON!!!  Distanz: 86.22 CPU_temp: 27.172C
+2021-03-11 23:59:53 n=: 10: Ventil ON!!!  Distanz: 84.19125 CPU_temp: 22.33C
+2021-03-12 13:42:26 n=: 10: Ventil ON!!!  Distanz: 82.82 CPU_temp: 31.476C
