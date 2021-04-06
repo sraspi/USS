@@ -15,7 +15,7 @@ from email.mime.text import MIMEText
 
 #E-Mail an sraspi21@gmail.com:
 Inhalt = ("logfile.txt")
-Betreff = str("l<5!!!")
+Betreff = str("lIBC leer!!!")
 sender_email = "sraspi21@gmail.com"
 receiver_email = "sraspi21@gmail.com"
 password = "StJ19gmail"
@@ -57,7 +57,7 @@ with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
     server.login(sender_email, password)
     server.sendmail(sender_email, receiver_email, text)
 
-print("mail_l<5 sent")
+print("mail_ibc sent")
   
 
 

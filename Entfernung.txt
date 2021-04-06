@@ -1,8 +1,4 @@
-2021-03-11 17:52:25 n=: 10: Ventil ON!!!  Distanz: 85.47222222222223 CPU_temp: 26.096C
-2021-03-11 18:11:09 n=: 10: Ventil ON!!!  Distanz: 85.417 CPU_temp: 22.868C
-2021-03-11 18:25:51 n=: 10: Ventil ON!!!  Distanz: 86.22 CPU_temp: 27.172C
-2021-03-11 23:59:53 n=: 10: Ventil ON!!!  Distanz: 84.19125 CPU_temp: 22.33C
-2021-03-12 13:42:26 n=: 10: Ventil ON!!!  Distanz: 82.82 CPU_temp: 31.476C
-2021-03-12 23:59:57 n=: 10: Ventil ON!!!  Distanz: 83.85999999999999 CPU_temp: 22.868C
-2021-03-13 23:59:59 n=: 10: Ventil ON!!!  Distanz: 145.03199999999998 CPU_temp: 19.64C
-2021-03-14 09:43:23 n=: 10: Ventil ON!!!  Distanz: 84.54625 CPU_temp: 19.64C
+
+2021-04-05 23:41:13 n=: 0: Ventil ON!!!   CPU_temp: 18.564C
+2021-04-05 23:59:39 n=: 0: Ventil ON!!!   CPU_temp: 17.488C
+2021-04-06 00:20:17 n=: 1180: Ventil OFF!!!  Distanz: 19.552  CPU_temp: 14.798C

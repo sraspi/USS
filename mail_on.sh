@@ -1,5 +1,6 @@
 #!/bin/sh
-#US-laucher.sh
+#mail_ibc.sh
 cd /
 cd /home/pi/US-Sensor
-python3 USS3.1.py
+python3 mail_on.py
+
