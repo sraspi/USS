@@ -1,3 +1,7 @@
 
-Reboot 2021-04-06 12:45:32 USS3.3.py started
+Reboot 2021-04-06 20:22:54 USS3.3.py started
 
+2021-04-06 20:43:38 n=: 1180 Mittelwert: 6.3  CPU_temp: 14.8 C  T: 0.27 P: 1012.5 Hm: 84.9
+2021-04-06 21:03:37 n=: 2360 Mittelwert: 6.4  CPU_temp: 13.2 C  T: 0.11 P: 1012.6 Hm: 85.2
+2021-04-06 21:23:36 n=: 3540 Mittelwert: 6.0  CPU_temp: 13.2 C  T: 0.02 P: 1012.7 Hm: 85.8
+2021-04-06 21:43:35 n=: 4720 Mittelwert: 6.0  CPU_temp: 12.6 C  T: 0.05 P: 1012.8 Hm: 86.0
