@@ -1,4 +1,2 @@
+2021-04-06 12:45:32 started  n=: 0: Ventil ON!!!   CPU_temp: 25.558C
 
-2021-04-05 23:41:13 n=: 0: Ventil ON!!!   CPU_temp: 18.564C
-2021-04-05 23:59:39 n=: 0: Ventil ON!!!   CPU_temp: 17.488C
-2021-04-06 00:20:17 n=: 1180: Ventil OFF!!!  Distanz: 19.552  CPU_temp: 14.798C

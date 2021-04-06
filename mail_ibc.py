@@ -14,8 +14,8 @@ from email.mime.text import MIMEText
 
 
 #E-Mail an sraspi21@gmail.com:
-Inhalt = ("logfile.txt")
-Betreff = str("lIBC leer!!!")
+Inhalt = ("Entfernung.txt")
+Betreff = str("IBC leer!!!")
 sender_email = "sraspi21@gmail.com"
 receiver_email = "sraspi21@gmail.com"
 password = "StJ19gmail"
@@ -31,7 +31,7 @@ message["Bcc"] = receiver_email  # Recommended for mass emails
 # Add body to email
 message.attach(MIMEText(Inhalt, "plain"))
 
-filename = "/home/pi/US-Sensor/logfile.txt" # In same directory as script
+filename = "/home/pi/US-Sensor/Entfernung.txt" # In same directory as script
    
 # Open PDF file in binary mode  
 with open(filename, "rb") as attachment:
@@ -46,7 +46,7 @@ with open(filename, "rb") as attachment:
 
         
     # Add header as key/value pair to attachment part
-    part.add_header("Content-Disposition", "attachment; filename=logfile.txt",)
+    part.add_header("Content-Disposition", "attachment; filename=Entfernung.txt",)
     # Add attachment to message and convert message to string
     message.attach(part)
     text = message.as_string()
