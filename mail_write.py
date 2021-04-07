@@ -14,8 +14,8 @@ from email.mime.text import MIMEText
 
 
 #E-Mail an sraspi21@gmail.com:
-Inhalt = ("logfile.txt")
-Betreff = str("logfile written !!!")
+Inhalt = ("ver. USS4.4.py")
+Betreff = str("Abstand exakt 1 h???")
 sender_email = "sraspi21@gmail.com"
 receiver_email = "sraspi21@gmail.com"
 password = "StJ19gmail"

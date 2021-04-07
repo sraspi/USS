@@ -1,6 +1,6 @@
-2021-04-06 20:22:54 started  n=: 0: Ventil ON!!!   CPU_temp: 17.5C
+2021-04-07 17:25:21 started  n=: 0: Ventil ON!!!   CPU_temp: 19.6C
 
 
-2021-04-06 20:43:31 n=: 1180: IBC leer!!!  
+2021-04-07 17:46:00 n=: 1180: IBC leer!!!  
 
-2021-04-06 20:43:34 n=: 1180: Ventil OFF!!!  Distanz: 7.0  CPU_temp: 14.26C
+2021-04-07 17:46:03 n=: 1180: Ventil OFF!!!  Distanz: 7.0  CPU_temp: 19.102C
