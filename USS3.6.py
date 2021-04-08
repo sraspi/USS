@@ -101,14 +101,14 @@ print()
 Datum = time.strftime("%Y-%m-%d %H:%M:%S")
 
 fobj_out = open(logfile,"a")
-fobj_out.write('\n' + "Reboot " +  Datum + " USS3.6.py started" + '\n' + '\n')
+fobj_out.write('\n' +  "Reboot " +  Datum + " USS3.6.py started" + '\n' + '\n')
 fobj_out.close()
 
 print("Ventil ON")
 GPIO.output(22, GPIO.HIGH)
 cpu = CPUTemperature()
 fobj_out = open(filename,"a")
-fobj_out.write(Datum + " started " + " n=: " + str(d) + ": Ventil ON!!!  "  + " CPU_temp: " + str(round(cpu.temperature,1)) + "C"  + '\n' + '\n')
+fobj_out.write("---------------------------------------------" + '\n' + Datum + " started " + " n=: " + str(d) + ": Ventil ON!!!  "  + " CPU_temp: " + str(round(cpu.temperature,1)) + "C"  + '\n')
 fobj_out.close()
 time.sleep(5)
 subprocess.call("/home/pi/US-Sensor/mail_on.sh")
@@ -297,8 +297,6 @@ try:
                 
         t = datetime.datetime.now()  
         t_mail = t.hour   
-        print("t_mail: ", t_mail)      
-
         if t_mail == 6 and t6:
             subprocess.call("/home/pi/US-Sensor/USmail.sh")
             t6 = False

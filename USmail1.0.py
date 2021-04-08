@@ -43,7 +43,7 @@ while True:
   Inhalt = "USS Temp-Daten"
   Betreff = (t + p +h)
   sender_email = "sraspi21@gmail.com"
-  receiver_email = "stefan.taubert.apweiler@gmail.com"
+  receiver_email = "sraspi21@gmail.com"
   password = "StJ19gmail"
   #password = input("Type your password and press enter:")
 
