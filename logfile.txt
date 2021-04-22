@@ -1,7 +1,30 @@
 
-Reboot 2021-04-08 10:32:00 USS3.6.py started
+Reboot 2021-04-22 06:57:00 USS3.8.py started14<D<8; F<1mm/min,n=116
 
-2021-04-08 10:52:52 n=: 1180 Mittelwert: 6.4  CPU_temp: 22.9 C  T: 6.03 P: 1024.4 Hm: 59.8
-2021-04-08 11:12:51 n=: 2360 Mittelwert: 6.2  CPU_temp: 21.3 C  T: 6.9 P: 1024.3 Hm: 57.5
-2021-04-08 11:32:50 n=: 3540 Mittelwert: 6.6  CPU_temp: 22.9 C  T: 7.87 P: 1024.2 Hm: 56.6
-2021-04-08 11:52:49 n=: 4720 Mittelwert: 6.2  CPU_temp: 23.9 C  T: 8.96 P: 1024.1 Hm: 55.1
+2021-04-22 07:17:36 n=: 1180 Mittelwert: 9.5  CPU_temp: 15.3 C  T: 2.49 P: 1023.6 Hm: 74.1
+2021-04-22 07:37:36 n=: 2360 Mittelwert: 9.1  CPU_temp: 17.5 C  T: 3.91 P: 1023.6 Hm: 70.3
+2021-04-22 07:57:36 n=: 3540 Mittelwert: 8.6  CPU_temp: 20.7 C  T: 6.2 P: 1023.7 Hm: 62.1
+2021-04-22 08:17:40 n=: 4720 Mittelwert: 8.3  CPU_temp: 19.6 C  T: 6.45 P: 1023.8 Hm: 59.0
+2021-04-22 08:37:42 n=: 5900 Mittelwert: 7.8  CPU_temp: 22.3 C  T: 6.96 P: 1024.0 Hm: 57.6
+2021-04-22 08:57:41 n=: 7080 Mittelwert: 8.2  CPU_temp: 22.9 C  T: 8.81 P: 1024.2 Hm: 51.8
+2021-04-22 09:17:40 n=: 8260 Mittelwert: 8.2  CPU_temp: 25.0 C  T: 10.81 P: 1024.3 Hm: 46.0
+2021-04-22 09:37:39 n=: 9440 Mittelwert: 8.2  CPU_temp: 26.6 C  T: 12.19 P: 1024.4 Hm: 41.7
+2021-04-22 09:57:38 n=: 10620 Mittelwert: 7.8  CPU_temp: 23.9 C  T: 10.71 P: 1024.7 Hm: 43.1
+2021-04-22 10:17:45 n=: 11800 Mittelwert: 8.0  CPU_temp: 23.4 C  T: 9.43 P: 1024.9 Hm: 47.8
+2021-04-22 10:37:45 n=: 12980 Mittelwert: 8.0  CPU_temp: 23.9 C  T: 10.21 P: 1024.9 Hm: 46.5
+2021-04-22 10:57:44 n=: 14160 Mittelwert: 8.1  CPU_temp: 25.6 C  T: 11.19 P: 1024.8 Hm: 46.1
+2021-04-22 11:17:43 n=: 15340 Mittelwert: 8.1  CPU_temp: 28.2 C  T: 12.89 P: 1024.8 Hm: 43.4
+2021-04-22 11:37:42 n=: 16520 Mittelwert: 7.7  CPU_temp: 25.6 C  T: 13.0 P: 1024.8 Hm: 42.5
+2021-04-22 11:57:41 n=: 17700 Mittelwert: 8.1  CPU_temp: 28.2 C  T: 13.32 P: 1024.8 Hm: 41.8
+2021-04-22 12:17:45 n=: 18880 Mittelwert: 8.0  CPU_temp: 29.9 C  T: 14.65 P: 1024.8 Hm: 38.7
+2021-04-22 12:37:44 n=: 20060 Mittelwert: 7.9  CPU_temp: 28.8 C  T: 14.92 P: 1024.9 Hm: 38.0
+2021-04-22 12:57:43 n=: 21240 Mittelwert: 7.9  CPU_temp: 29.9 C  T: 15.69 P: 1024.9 Hm: 36.9
+2021-04-22 13:17:42 n=: 22420 Mittelwert: 7.9  CPU_temp: 29.9 C  T: 14.66 P: 1024.9 Hm: 37.0
+2021-04-22 13:37:41 n=: 23600 Mittelwert: 7.8  CPU_temp: 30.9 C  T: 15.85 P: 1024.8 Hm: 35.2
+2021-04-22 13:57:40 n=: 24780 Mittelwert: 7.7  CPU_temp: 31.5 C  T: 15.53 P: 1024.8 Hm: 35.4
+2021-04-22 14:17:44 n=: 25960 Mittelwert: 7.7  CPU_temp: 31.5 C  T: 15.83 P: 1024.7 Hm: 35.1
+2021-04-22 14:37:43 n=: 27140 Mittelwert: 7.7  CPU_temp: 31.5 C  T: 15.93 P: 1024.7 Hm: 35.8
+
+Reboot 2021-04-22 14:46:02 USS3.8.py started14<D<8; F<1mm/min,n=116
+
+2021-04-22 14:46:02 keyboard.interrupt:  n: 8 CPU_temp: 31.476C Mw: 6.911
