@@ -101,17 +101,17 @@ print()
 Datum = time.strftime("%Y-%m-%d %H:%M:%S")
 
 fobj_out = open(logfile,"a")
-fobj_out.write('\n' +  "Reboot " +  Datum + " USS3.8.py started" + "14<D<8; F<1mm/min,n=116" + '\n' + '\n')
+fobj_out.write('\n' +  "Reboot " +  Datum + " USS3.8.py started" + "16<D<11; F<0.5mm/min,n=116" + '\n' + '\n')
 fobj_out.close()
 
-print("Ventil ON")
-GPIO.output(22, GPIO.HIGH)
+print("Ventil OFF")
+GPIO.output(22, GPIO.LOW)
 cpu = CPUTemperature()
 fobj_out = open(filename,"a")
-fobj_out.write("---------------------------------------------" + '\n' + Datum + " started " + " n=: " + str(d) + ": Ventil ON!!!  "  + " CPU_temp: " + str(round(cpu.temperature,1)) + "C"  + '\n')
+fobj_out.write("---------------------------------------------" + '\n' + Datum + " started " + " n=: " + str(d) + ": Ventil OFF!!!  "  + " CPU_temp: " + str(round(cpu.temperature,1)) + "C"  + '\n')
 fobj_out.close()
 time.sleep(5)
-#subprocess.call("/home/pi/US-Sensor/mail_on.sh")
+subprocess.call("/home/pi/US-Sensor/mail_off.sh")
 Vt_start = time.time()
 tm_start = time.time()
 
@@ -248,7 +248,7 @@ try:
                  
                   
 
-            if R_on and Dm > 14 and mail: #wenn Dm > 14cm und R_on (also vorher auf OFF) dann Ventil ON
+            if R_on and Dm > 16 and mail: #wenn Dm > 16cm und R_on (also vorher auf OFF) dann Ventil ON
                 print("Ventil ON")
                 GPIO.output(22, GPIO.HIGH)
                 Datum = time.strftime("%Y-%m-%d %H:%M:%S")
@@ -262,7 +262,7 @@ try:
               
                    
 
-            if R_off and Dm < 8 and mail:  #wenn DM < 8cm und R_off (also vorher auf ON) dann Ventil OFF
+            if R_off and Dm < 11 and mail:  #wenn DM < 11cm und R_off (also vorher auf ON) dann Ventil OFF
                 print("Ventil OFF")
                 GPIO.output(22, GPIO.LOW)
                 Datum = time.strftime("%Y-%m-%d %H:%M:%S")
