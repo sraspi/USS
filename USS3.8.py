@@ -101,7 +101,7 @@ print()
 Datum = time.strftime("%Y-%m-%d %H:%M:%S")
 
 fobj_out = open(logfile,"a")
-fobj_out.write('\n' +  "Reboot " +  Datum + " USS3.8.py started" + "16<D<11; F<0.5mm/min,n=116" + '\n' + '\n')
+fobj_out.write('\n' +  "Reboot " +  Datum + " USS3.8.py started" + "16<D<11; F<0.5mm/min,n=116 t=20min"+ '\n' + '\n')
 fobj_out.close()
 
 print("Ventil OFF")
