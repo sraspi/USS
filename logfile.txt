@@ -1,5 +1,3 @@
 
-Reboot 2021-04-23 19:26:29 USS3.8.py started16<D<11; F<0.5mm/min,n=116 t=20min
+Reboot 2021-04-28 14:52:49 USS3.8.py started16<D<11; F<0.5mm/min,n=116 t=20min
 
-2021-04-23 19:47:21 n=: 1180 Mittelwert: 7.3  CPU_temp: 23.9 C  T: 12.55 P: 1025.9 Hm: 45.0
-2021-04-23 20:07:24 n=: 2360 Mittelwert: 7.2  CPU_temp: 22.9 C  T: 12.23 P: 1025.9 Hm: 46.1
