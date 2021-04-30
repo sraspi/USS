@@ -20,28 +20,30 @@ while True:
     data = sum(data)
     print(data)
     f.close()
+    
 
-    if data > 7:
-        errorcontent = ("YTDL ausgefallen!")
-    if data == 7:
-        errorcontent = ("Pi1 Pi2 Pi3 OK")
+    if data > 6:
+        errorcontent = ("mind. YTDL ausgefallen!")
     if data == 6:
-        errorcontent = ("YTDL ausgefallen!")
+        errorcontent = ("Pi1 Pi2 Pi3 OK")
     if data == 5:
-        errorcontent = ("ACC ausgefallen!")
+        errorcontent = ("YTDL ausgefallen!")
     if data == 4:
-        errorcontent = ("YTDL und USS ausgefallen!")
+        errorcontent = ("USS ausgefallen!")
     if data == 3:
         errorcontent = ("ACC ausgefallen!")
     if data == 2:
-        errorcontent = (" YTDL und AAC ausgefallen!")
+        errorcontent = ("USS und YTDLausgefallen!")
     if data == 1:
-        errorcontent = ("USS und ACC ausgefallen!")
+        errorcontent = (" USS und AAC ausgefallen!")
+    if data == 0:
+        errorcontent = ("YTDL / USS  / ACC ausgefallen!")
+
 
     #E-Mail an stefan.taubert.apweiler@gmail.com:
     print("E-Mail wird erstellt")
     Inhalt = (errorcontent)
-    Betreff = str("Pi_control")
+    Betreff = str("USS_Pi_control")
     sender_email = "sraspi21@gmail.com"
     receiver_email = "sraspi21@gmail.com"
     password = "StJ19gmail"

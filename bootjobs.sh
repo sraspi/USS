@@ -10,7 +10,6 @@ echo "NAS mounted"
 cd /home/pi/US-Sensor/
 sh filecopy.sh
 rm logfile.txt
-sudo mount -a
 sh US-launcher.sh
 
 

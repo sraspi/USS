@@ -1,3 +1,25 @@
 
-Reboot 2021-04-28 14:52:49 USS3.8.py started16<D<11; F<0.5mm/min,n=116 t=20min
+Reboot 2021-04-30 00:01:11 USS3.8.py started16<D<11; F<0.5mm/min,n=116 t=20min
 
+2021-04-30 00:21:20 n=: 1180 Mittelwert: 6.7  CPU_temp: 18.6 C  T: 3.56 P: 1011.4 Hm: 81.2
+2021-04-30 00:41:20 n=: 2360 Mittelwert: 6.6  CPU_temp: 18.6 C  T: 3.6 P: 1011.5 Hm: 81.9
+2021-04-30 01:01:21 n=: 3540 Mittelwert: 6.6  CPU_temp: 16.4 C  T: 3.45 P: 1011.6 Hm: 82.0
+2021-04-30 01:21:21 n=: 4720 Mittelwert: 6.4  CPU_temp: 16.4 C  T: 3.26 P: 1011.7 Hm: 82.3
+2021-04-30 01:41:20 n=: 5900 Mittelwert: 6.3  CPU_temp: 16.4 C  T: 3.16 P: 1011.7 Hm: 82.6
+2021-04-30 02:01:20 n=: 7080 Mittelwert: 6.2  CPU_temp: 17.5 C  T: 3.04 P: 1011.8 Hm: 83.0
+2021-04-30 02:21:20 n=: 8260 Mittelwert: 6.3  CPU_temp: 16.4 C  T: 3.03 P: 1011.8 Hm: 83.1
+2021-04-30 02:41:19 n=: 9440 Mittelwert: 6.2  CPU_temp: 16.4 C  T: 2.89 P: 1011.8 Hm: 82.8
+2021-04-30 03:01:19 n=: 10620 Mittelwert: 6.3  CPU_temp: 16.4 C  T: 2.71 P: 1012.0 Hm: 83.1
+2021-04-30 03:21:18 n=: 11800 Mittelwert: 6.3  CPU_temp: 16.4 C  T: 2.88 P: 1012.1 Hm: 83.1
+2021-04-30 03:41:18 n=: 12980 Mittelwert: 6.3  CPU_temp: 16.9 C  T: 3.2 P: 1012.1 Hm: 82.4
+2021-04-30 04:01:19 n=: 14160 Mittelwert: 6.3  CPU_temp: 16.9 C  T: 3.35 P: 1012.0 Hm: 81.9
+2021-04-30 04:21:19 n=: 15340 Mittelwert: 6.3  CPU_temp: 17.5 C  T: 3.48 P: 1012.0 Hm: 81.8
+2021-04-30 04:41:18 n=: 16520 Mittelwert: 6.3  CPU_temp: 17.5 C  T: 3.84 P: 1011.9 Hm: 81.4
+2021-04-30 05:01:17 n=: 17700 Mittelwert: 6.3  CPU_temp: 17.5 C  T: 4.07 P: 1011.8 Hm: 80.9
+2021-04-30 05:21:17 n=: 18880 Mittelwert: 6.3  CPU_temp: 16.9 C  T: 4.02 P: 1012.0 Hm: 80.8
+2021-04-30 05:41:16 n=: 20060 Mittelwert: 6.3  CPU_temp: 16.9 C  T: 4.1 P: 1012.0 Hm: 80.8
+2021-04-30 06:01:19 n=: 21240 Mittelwert: 6.2  CPU_temp: 18.6 C  T: 4.09 P: 1011.8 Hm: 80.7
+2021-04-30 06:21:19 n=: 22420 Mittelwert: 6.2  CPU_temp: 17.5 C  T: 4.17 P: 1011.9 Hm: 80.6
+2021-04-30 06:41:18 n=: 23600 Mittelwert: 6.1  CPU_temp: 18.6 C  T: 4.32 P: 1011.9 Hm: 80.4
+2021-04-30 07:01:17 n=: 24780 Mittelwert: 6.1  CPU_temp: 18.6 C  T: 4.62 P: 1012.1 Hm: 80.4
+2021-04-30 07:21:16 n=: 25960 Mittelwert: 6.2  CPU_temp: 18.6 C  T: 4.77 P: 1012.2 Hm: 79.9

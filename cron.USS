@@ -1,0 +1,6 @@
+@reboot cd /home/pi/US-Sensor && sh bootjobs.sh
+25 04 * * * cd /home/pi/US-Sensor  && ./USS_Pi_control.sh
+#00 10 * * * cd /home/pi/US-Sensor/ && sh USmail.sh
+#05 10 * * * cd /home/pi/US-Sensor/ && sh USmail.sh
+#10 10 * * * cd /home/pi/US-Sensor/ && sh USmail.sh
+59 23 * * * sudo reboot now
