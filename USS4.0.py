@@ -97,12 +97,12 @@ R_on = True
 R_off = True
 mail = True
 
-print("USS3.9.py started")
+print("USS4.0.py started")
 print()
 Datum = time.strftime("%Y-%m-%d %H:%M:%S")
 
 fobj_out = open(logfile,"a")
-fobj_out.write('\n' +  "Reboot " +  Datum + " USS3.9.py started" + "16<D<11; F<0.5mm/min,n=116 t=20min"+ '\n' + '\n')
+fobj_out.write('\n' +  "Reboot " +  Datum + " USS4.0.py started" + "16<D<11; F<35,n=116 t=20min"+ '\n' + '\n')
 fobj_out.close()
 
 print("Ventil ON")
@@ -226,8 +226,7 @@ try:
             F = (0.0000000001+E)/Vt_diff*10*60
             print("F:", F, " mm/min")
 
-            if F < 0 and mail and Dm > 16:             #  F> 0/min und bisher ibc nicht leer und D>16
-
+            if Dm > 35:             #  ibc leer 
                   print("Email IBC leer!")
                   Datum = time.strftime("%Y-%m-%d %H:%M:%S")
                   fobj_out = open(filename,"a")
@@ -236,7 +235,6 @@ try:
                   subprocess.call("/home/pi/US-Sensor/mail_ibc.sh")
                   print()
                   print()
-                  mail = False
                   print("Ventil OFF")
                   GPIO.output(22, GPIO.LOW)
                   Datum = time.strftime("%Y-%m-%d %H:%M:%S")
@@ -249,7 +247,7 @@ try:
                  
                   
 
-            if R_on and Dm > 16 and mail: #wenn Dm > 16cm und R_on (also vorher auf OFF) dann Ventil ON
+            if R_on and Dm > 16: #wenn Dm > 16cm und R_on (also vorher auf OFF) dann Ventil ON
                 print("Ventil ON")
                 GPIO.output(22, GPIO.HIGH)
                 Datum = time.strftime("%Y-%m-%d %H:%M:%S")
@@ -263,7 +261,7 @@ try:
               
                    
 
-            if R_off and Dm < 11 and mail:  #wenn DM < 11cm und R_off (also vorher auf ON) dann Ventil OFF
+            if R_off and Dm < 11:  #wenn DM < 11cm und R_off (also vorher auf ON) dann Ventil OFF
                 print("Ventil OFF")
                 GPIO.output(22, GPIO.LOW)
                 Datum = time.strftime("%Y-%m-%d %H:%M:%S")
@@ -280,8 +278,6 @@ try:
             fobj_out = open(logfile,"a")
             fobj_out.write(Datum + " n=: " + str(d) + " Mittelwert: " +  str(round(Dm, 1))+ "  CPU_temp: " + str(round(cpu.temperature, 1)) + " C " + " T: " + str(round(Tm, 2)) + " P: " + str(round(Pm, 1)) + " Hm: " + str(round(Hm,1)) + '\n')
             fobj_out.close()
-            #subprocess.call("/home/pi/US-Sensor/mail_write.sh")
-            #subprocess.call("/home/pi/US-Sensor/mail_on.sh")
             
             z = 0
             Dg = 0
@@ -300,7 +296,7 @@ try:
         t = datetime.datetime.now()  
         t_mail = t.hour   
         print(t_mail)
-        if t_mail > 0 and t1:
+        if t_mail > 0 and t1:                     # also ab 1:00 ein Eintrag(2) in error.log
             f = open("/home/pi/NAS/error.log", "a") 
             f.write("2")
             f.close()
