@@ -1,3 +1,17 @@
+-----------------------------------
+2021-05-03 10:51:58 started  n=: 0: Ventil ON!!!   CPU_temp: 36.3C
+2021-05-03 11:32:12 n=: 2360: Ventil ON!!!  Distanz: 24.4 CPU_temp: 33.6C F: 3.89
 ---------------------------------------------
-2021-05-02 08:46:55 started  n=: 0: Ventil ON!!!   CPU_temp: 28.2C
-2021-05-02 09:07:06 n=: 1180: Ventil OFF!!!  Distanz: 9.7  CPU_temp: 23.9C
+2021-05-03 11:42:12 started  n=: 0: Ventil ON!!!   CPU_temp: 37.9C
+
+2021-05-03 12:02:25 n=: 1180: IBC leer!!!  
+
+2021-05-03 12:02:40 n=: 1180: Ventil OFF!!!  Distanz: 31.4  CPU_temp: 32.552C F: 0.9
+2021-05-03 12:02:49 n=: 1180: Ventil ON!!!  Distanz: 31.4 CPU_temp: 32.6C F: 0.9
+---------------------------------------------
+2021-05-03 12:14:20 started  n=: 0: Ventil ON!!!   CPU_temp: 35.8C
+
+2021-05-03 12:34:32 n=: 1180: IBC leer!!!  
+
+2021-05-03 12:34:35 n=: 1180: Ventil OFF!!!  Distanz: 29.5  CPU_temp: 32.014C F: -0.45
+2021-05-03 12:34:38 n=: 1180: Ventil ON!!!  Distanz: 29.5 CPU_temp: 32.6C F: -0.45
