@@ -79,7 +79,7 @@ E = 2               #Bedingung für Ventil ON erfüllt
 D = [0]*(999)       #Array von D0-D999
 VT_diff = 0
 
-t1 = True
+NAS = True
 t6 = True
 t8 = True
 t10 = True
@@ -244,6 +244,9 @@ try:
                   fobj_out.close()
                   subprocess.call("/home/pi/US-Sensor/mail_off.sh")
                   mail = False
+                  R_on = True
+                  R_off = False
+
 
                  
                   
@@ -296,37 +299,26 @@ try:
                 
         t = datetime.datetime.now()  
         t_mail = t.hour   
-        if t_mail > 0 and t1:                     # also ab 1:00 ein Eintrag(2) in error.log
+        if NAS:                     
             f = open("/home/pi/NAS/error.log", "a") 
             f.write("2")
             f.close()
-            print("NAS2 written")
-            t1 = False
+            print("NAS 2 written")
+            NAS = False
 
         if t_mail == 6 and t6:
             subprocess.call("/home/pi/US-Sensor/USmail.sh")
             t6 = False
-        if t_mail == 8 and t8:
-            subprocess.call("/home/pi/US-Sensor/USmail.sh")
-            t8 = False
-        if t_mail == 10 and t10:
-            subprocess.call("/home/pi/US-Sensor/USmail.sh")
-            t10 = False
+      
         if t_mail == 12 and t12:
             subprocess.call("/home/pi/US-Sensor/USmail.sh")
             t12 = False
-        if t_mail == 14 and t14:
-            subprocess.call("/home/pi/US-Sensor/USmail.sh")
-            t14 = False
+       
         if t_mail == 16 and t16:
             subprocess.call("/home/pi/US-Sensor/USmail.sh")
             t16 = False
-        if t_mail == 19 and t19:
-            subprocess.call("/home/pi/US-Sensor/USmail.sh")
-            t19 = False
-        if t_mail == 20 and t20:
-            subprocess.call("/home/pi/US-Sensor/USmail.sh")
-            t20 = False
+       
+        
         if t_mail == 22 and t22:
             subprocess.call("/home/pi/US-Sensor/USmail.sh")
             t22 = False
