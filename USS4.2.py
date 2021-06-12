@@ -80,10 +80,10 @@ D = [0]*(999)       #Array von D0-D999
 VT_diff = 0
 
 NAS = True
-t6 = False
-t8 = False
-t10 = False
-t12 = False
+t6 = True
+t9 = True
+t12 = True
+t15 = True
 t14 = False
 t16 = False
 t19 = False
@@ -97,22 +97,22 @@ R_on = True
 R_off = True
 mail = True
 
-print("USS4.1.py started")
+print("USS4.2.py started")
 print()
 Datum = time.strftime("%Y-%m-%d %H:%M:%S")
 
 fobj_out = open(logfile,"a")
-fobj_out.write('\n' +  "Reboot " +  Datum + " USS4.1.py started" + "16<D<11; F<35 and write F,n=116 t=20min"+ '\n' + '\n')
+fobj_out.write('\n' +  "Reboot " +  Datum + " USS4.2.py started" + "16<D<11; F<35 and write F,n=116 t=20min"+ '\n' + '\n')
 fobj_out.close()
 
-print("Ventil ON")
-GPIO.output(22, GPIO.HIGH)
+print("Ventil OFF")
+GPIO.output(22, GPIO.LOW)
 cpu = CPUTemperature()
 fobj_out = open(filename,"a")
-fobj_out.write("---------------------------------------------" + '\n' + Datum + " started " + " n=: " + str(d) + ": Ventil ON!!!  "  + " CPU_temp: " + str(round(cpu.temperature,1)) + "C"  + '\n')
+fobj_out.write("---------------------------------------------" + '\n' + Datum + " started " + " n=: " + str(d) + ": Ventil OFF!!!  "  + " CPU_temp: " + str(round(cpu.temperature,1)) + "C"  + '\n')
 fobj_out.close()
-time.sleep(5)
-subprocess.call("/home/pi/US-Sensor/mail_on.sh")
+time.sleep(2)
+#subprocess.call("/home/pi/US-Sensor/mail_on.sh")
 Vt_start = time.time()
 tm_start = time.time()
 
@@ -226,26 +226,20 @@ try:
             F = (0.0000000001+E)/Vt_diff*10*60
             print("F:", F, " mm/min")
 
+            
+
             if Dm > 30 and mail:             #  ibc leer 
                   print("Email IBC leer!")
-                  Datum = time.strftime("%Y-%m-%d %H:%M:%S")
-                  fobj_out = open(filename,"a")
-                  fobj_out.write('\n' + Datum + " n=: " + str(d) + ": IBC leer!!!  " + '\n' + '\n')
-                  fobj_out.close()                
                   subprocess.call("/home/pi/US-Sensor/mail_ibc.sh")
                   print()
                   print()
-                  print("Ventil OFF")
-                  GPIO.output(22, GPIO.LOW)
                   Datum = time.strftime("%Y-%m-%d %H:%M:%S")
                   cpu = CPUTemperature()
                   fobj_out = open(filename,"a")
-                  fobj_out.write(Datum + " n=: " + str(d) +  ": Ventil OFF!!!  " + "Distanz: " +  str(round(mw,1)) + "  CPU_temp: " + str(cpu.temperature) + "C"  + " F: "+ str(round(F,2)) + '\n')
+                  fobj_out.write(Datum + " n=: " + str(d) +  ": IBC leer!!!  " + "Distanz: " +  str(round(mw,1)) + "  CPU_temp: " + str(cpu.temperature) + "C"  + " F: "+ str(round(F,2)) + '\n')
                   fobj_out.close()
-                  subprocess.call("/home/pi/US-Sensor/mail_off.sh")
                   mail = False
-                  R_on = True
-                  R_off = False
+                 
 
 
                  
@@ -307,21 +301,38 @@ try:
             NAS = False
 
         if t_mail == 6 and t6:
+            print("check [1] written")
+            f = open("/home/pi/US-Sensor/check.txt", "a")
+            f.write("1")
+            f.close()
+
             subprocess.call("/home/pi/US-Sensor/USmail.sh")
             t6 = False
-      
+   
+        if t_mail == 9  and t9:
+            print("check [1] written")
+            f = open("/home/pi/US-Sensor/check.txt", "a")
+            f.write("1")
+            f.close()
+            subprocess.call("/home/pi/US-Sensor/USmail.sh")
+            t9 = False
+       
         if t_mail == 12 and t12:
+            print("check [1] written")
+            f = open("/home/pi/US-Sensor/check.txt", "a")
+            f.write("1")
+            f.close()
             subprocess.call("/home/pi/US-Sensor/USmail.sh")
             t12 = False
        
-        if t_mail == 16 and t16:
-            subprocess.call("/home/pi/US-Sensor/USmail.sh")
-            t16 = False
-       
         
-        if t_mail == 22 and t22:
-            subprocess.call("/home/pi/US-Sensor/USmail.sh")
-            t22 = False
+        if t_mail == 15 and t15:
+            print("check [1] written")
+            f = open("/home/pi/US-Sensor/check.txt", "a")
+            f.write("1")
+            f.close()
+            #subprocess.call("/home/pi/US-Sensor/USmail.sh")
+            t15 = False
        
 
 except KeyboardInterrupt:

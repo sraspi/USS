@@ -1,5 +1,6 @@
 #!/bin/sh
-#US-laucher.sh
+#s_read1.1.py
 cd /
 cd /home/pi/US-Sensor
-python3 USS4.4.py
+python3 c_read1.1.py
+
