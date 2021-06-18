@@ -18,3 +18,40 @@
 2021-06-11 22:56:42 n=: 42480: Ventil ON!!!  Distanz: 18.6 CPU_temp: 40.1C F: -1.05
 ---------------------------------------------
 2021-06-11 23:59:55 started  n=: 0: Ventil OFF!!!   CPU_temp: 39.0C
+2021-06-12 19:59:55 n=: 70800: Ventil ON!!!  Distanz: 25.0 CPU_temp: 32.6C F: 6.39
+2021-06-12 22:39:59 n=: 80240: Ventil OFF!!!  Distanz: 9.9  CPU_temp: 28.8C F: -0.8
+---------------------------------------------
+2021-06-12 23:59:54 started  n=: 0: Ventil OFF!!!   CPU_temp: 29.3C
+2021-06-13 00:20:26 n=: 1180: Ventil OFF!!!  Distanz: 9.6  CPU_temp: 25.6C F: 0.01
+2021-06-13 19:19:49 n=: 68440: Ventil ON!!!  Distanz: 18.0 CPU_temp: 34.7C F: 0.04
+2021-06-13 20:59:50 n=: 74340: Ventil OFF!!!  Distanz: 8.8  CPU_temp: 33.6C F: -0.9
+---------------------------------------------
+2021-06-13 23:59:53 started  n=: 0: Ventil OFF!!!   CPU_temp: 31.5C
+---------------------------------------------
+2021-06-14 07:13:23 started  n=: 0: Ventil OFF!!!   CPU_temp: 34.7C
+2021-06-14 07:33:55 n=: 1180: Ventil OFF!!!  Distanz: 8.3  CPU_temp: 29.3C F: 0.01
+2021-06-14 19:53:32 n=: 44840: Ventil ON!!!  Distanz: 16.6 CPU_temp: 37.4C F: 0.1
+2021-06-14 20:33:39 n=: 47200: IBC leer!!!  Distanz: 31.4  CPU_temp: 40.084C F: 4.16
+---------------------------------------------
+2021-06-14 23:59:51 started  n=: 0: Ventil OFF!!!   CPU_temp: 36.3C
+2021-06-15 12:20:07 n=: 43660: Ventil ON!!!  Distanz: 13.4 CPU_temp: 47.1C F: 0.05
+2021-06-15 13:20:09 n=: 47200: Ventil OFF!!!  Distanz: 9.2  CPU_temp: 46.0C F: -0.46
+2021-06-15 18:00:02 n=: 63720: Ventil ON!!!  Distanz: 22.2 CPU_temp: 43.3C F: 6.39
+2021-06-15 18:40:11 n=: 66080: IBC leer!!!  Distanz: 41.8  CPU_temp: 40.084C F: 2.92
+---------------------------------------------
+2021-06-15 23:59:55 started  n=: 0: Ventil OFF!!!   CPU_temp: 34.7C
+2021-06-16 00:20:27 n=: 1180: Ventil ON!!!  Distanz: 16.1 CPU_temp: 30.4C F: 0.21
+2021-06-16 02:00:27 n=: 7080: Ventil OFF!!!  Distanz: 9.9  CPU_temp: 30.4C F: -0.32
+2021-06-16 18:19:54 n=: 64900: Ventil ON!!!  Distanz: 29.2 CPU_temp: 46.5C F: 10.05
+2021-06-16 18:40:01 n=: 66080: IBC leer!!!  Distanz: 29.3  CPU_temp: 45.464C F: -0.29
+---------------------------------------------
+2021-06-16 20:35:36 started  n=: 0: Ventil OFF!!!   CPU_temp: 50.8C
+2021-06-16 20:56:09 n=: 1180: Ventil ON!!!  Distanz: 25.3 CPU_temp: 42.2C F: 0.01
+---------------------------------------------
+2021-06-16 23:59:54 started  n=: 0: Ventil OFF!!!   CPU_temp: 37.9C
+---------------------------------------------
+2021-06-17 11:09:04 started  n=: 0: Ventil OFF!!!   CPU_temp: 59.5C
+2021-06-17 20:49:20 n=: 34220: Ventil ON!!!  Distanz: 37.0 CPU_temp: 40.6C F: 11.8
+---------------------------------------------
+2021-06-17 23:59:56 started  n=: 0: Ventil OFF!!!   CPU_temp: 39.0C
+2021-06-18 00:20:27 n=: 1180: Ventil ON!!!  Distanz: 30.8 CPU_temp: 34.7C F: 0.14

@@ -129,7 +129,7 @@ print()
 Datum = time.strftime("%Y-%m-%d %H:%M:%S")
 
 fobj_out = open(logfile,"a")
-fobj_out.write('\n' +  "Reboot " +  Datum + " USS4.4.py started" + "16<D<11; F<35 and write F,n=116 t=20min"+ '\n' + '\n')
+fobj_out.write('\n' +  "Reboot " +  Datum + " USS4.4.py started" + "16<D<11; Dm>55 and write F,n=116 t=20min"+ '\n' + '\n')
 fobj_out.close()
 
 print("Ventil OFF")
@@ -256,7 +256,7 @@ try:
 
             
 
-            if Dm > 30 and mail:             #  ibc leer 
+            if Dm > 55 and mail:             #  ibc leer 
                   print("Email IBC leer!")
                   subprocess.call("/home/pi/US-Sensor/mail_ibc.sh")
                   print()

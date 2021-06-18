@@ -35,6 +35,7 @@ def c_r():
             else:
                 subprocess.call("/home/pi/US-Sensor/mail_error.sh")
                 print("USS-error")
+                subprocess.call("/home/pi/US-Sensor/reboot.sh")
    
 try:
     print("app started")

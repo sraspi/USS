@@ -32,8 +32,8 @@ while True:
         errorcontent = ("USS ausgefallen")
     if data == 12: # 48 ACC CBC
         errorcontent = ("UTDL USS ausgefallen")
-    if data == 11: # 128 YTDL USS CBC
-        errorcontent = ("ACC ausgefallen")
+    #if data == 11: # 128 YTDL USS CBC
+        #errorcontent = ("ACC ausgefallen")
     if data == 10: # 28 USS CBC
         errorcontent = ("YTDL ACC ausgefallen")
     if data == 9: # 18 YTDL BCC
