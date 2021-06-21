@@ -1,6 +1,6 @@
 #!/bin/sh
-#s_read1.1.py
+#s_read1.2.py
 cd /
 cd /home/pi/US-Sensor
-python3 c_read1.1.py
+python3 c_read1.2.py
 
