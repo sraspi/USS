@@ -43,5 +43,5 @@ cd .ssh
 nano id_ed25519.pub                                          #key kopieren und dann bei githaub hinzufügen
 git pull git@github.com:sraspi/USS.git
 git pull --all
-
+git pull git@github.com:sraspi/USS.git master
 
