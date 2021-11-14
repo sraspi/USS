@@ -34,3 +34,14 @@ git push -u origin master
 #anschließend:
 git pull --all  # holt Änderung aus github
 git push --all  # upload zu github
+
+Anleitung: Generating a new SSH key and adding it to the ssh-agent(google)
+ssh-keygen -t ed25519 -C "stefan.taubert.apweiler@gmail.com" # neuen key generieren
+eval "$(ssh-agent -s)"                                       # ssh agent starten
+ssh-add ~/.ssh/id_ed25519                                    #key dem keyagent hinzufügen
+cd .ssh
+nano id_ed25519.pub                                          #key kopieren und dann bei githaub hinzufügen
+git pull git@github.com:sraspi/USS.git
+git pull --all
+
+
