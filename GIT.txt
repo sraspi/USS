@@ -44,4 +44,4 @@ nano id_ed25519.pub                                          #key kopieren und d
 git pull git@github.com:sraspi/USS.git
 git pull --all
 git pull git@github.com:sraspi/USS.git master
-test
+test_test
