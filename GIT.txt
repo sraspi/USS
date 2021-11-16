@@ -28,7 +28,7 @@ pi: cd ~/.ssh
 profile/settungs/SSH and GPG keys:new key
 
 
-git remote add origin git@github.com:sraspi/ACC.git
+git remote add origin git@github.com:sraspi/USS.git
 git push -u origin master
 
 #anschließend:
@@ -41,6 +41,7 @@ eval "$(ssh-agent -s)"                                       # ssh agent starten
 ssh-add ~/.ssh/id_ed25519                                    #key dem keyagent hinzufügen
 cd .ssh
 nano id_ed25519.pub                                          #key kopieren und dann bei githaub hinzufügen
+git fetch --set-upstream origin master
 git pull git@github.com:sraspi/USS.git
 git pull --all
 git pull git@github.com:sraspi/USS.git master
