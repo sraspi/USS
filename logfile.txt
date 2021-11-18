@@ -36,3 +36,4 @@ Reboot 2021-11-17 10:24:35 USS4.5.py started16<D<11; Dm>55 and write F,n=116 t=2
 2021-11-18 18:00:17 n=: 63720 Mittelwert: 5.9  CPU_temp: 29.9 C  T: 8.79 P: 1021.9 Hm: 97.0 F: 0.02
 2021-11-18 18:20:16 n=: 64900 Mittelwert: 5.8  CPU_temp: 29.3 C  T: 8.94 P: 1021.7 Hm: 97.0 F: -0.02
 2021-11-18 18:40:16 n=: 66080 Mittelwert: 5.9  CPU_temp: 30.4 C  T: 9.08 P: 1021.9 Hm: 97.0 F: -0.0
+2021-11-18 19:00:15 n=: 67260 Mittelwert: 5.9  CPU_temp: 30.4 C  T: 9.27 P: 1022.0 Hm: 97.0 F: 0.18
