@@ -1,4 +1,4 @@
-12#im richtigen Ordner: 
+123#im richtigen Ordner: 
 sudo apt-get install git
 git init
 ls -a
