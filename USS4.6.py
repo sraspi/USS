@@ -111,7 +111,10 @@ def c_write():
             f = open("/home/pi/US-Sensor/check.txt", "w")
             f.write(str(t_mail))
             f.close()
-            subprocess.call("/home/pi/US-Sensor/USmail.sh")
+            if t_mail == 6:
+                subprocess.call("/home/pi/US-Sensor/USmail.sh")
+            if t_mail == 7:
+                subprocess.call("/home/pi/US-Sensor/USmail.sh")
             v[x] = False
             
 R_on = True
