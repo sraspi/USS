@@ -113,7 +113,7 @@ def c_write():
             f.close()
             if t_mail == 20: #from USS
                 subprocess.call("/home/pi/US-Sensor/USmail.sh")
-            if t_mail == 7:
+            if t_mail == 6:
                 subprocess.call("/home/pi/US-Sensor/USmail.sh")
             v[x] = False
             
@@ -121,12 +121,12 @@ R_on = True
 R_off = True
 mail = True
 
-print("USS4.5.py started")
+print("USS4.6.py started")
 print()
 Datum = time.strftime("%Y-%m-%d %H:%M:%S")
 
 fobj_out = open(logfile,"a")
-fobj_out.write('\n' +  "Reboot " +  Datum + " USS4.5.py started" + "16<D<11; Dm>55 and write F,n=116 t=20min"+ '\n' + '\n')
+fobj_out.write('\n' +  "Reboot " +  Datum + " USS4.6.py started" + "16<D<11; Dm>55 and write F,n=116 t=20min"+ '\n' + '\n')
 fobj_out.close()
 
 print("Ventil OFF")
