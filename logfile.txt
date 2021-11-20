@@ -1,25 +1,3 @@
 
-Reboot 2021-11-18 23:59:50 USS4.5.py started16<D<11; Dm>55 and write F,n=116 t=20min
+Reboot 2021-11-20 16:04:45 USS4.6w.py started16<D<11; Dm>55 and write F,n=116 t=20min
 
-2021-11-19 00:20:29 n=: 1180 Mittelwert: 6.5  CPU_temp: 31.5 C  T: 9.04 P: 1022.9 Hm: 97.0 F: -0.09
-2021-11-19 00:40:28 n=: 2360 Mittelwert: 6.3  CPU_temp: 30.4 C  T: 9.52 P: 1022.7 Hm: 97.0 F: -0.88
-2021-11-19 01:00:28 n=: 3540 Mittelwert: 6.4  CPU_temp: 30.9 C  T: 9.44 P: 1022.5 Hm: 97.0 F: 0.01
-2021-11-19 01:20:27 n=: 4720 Mittelwert: 6.4  CPU_temp: 30.9 C  T: 9.36 P: 1022.4 Hm: 97.0 F: 0.16
-2021-11-19 01:40:27 n=: 5900 Mittelwert: 6.5  CPU_temp: 31.5 C  T: 9.37 P: 1022.3 Hm: 97.0 F: 0.26
-2021-11-19 02:00:26 n=: 7080 Mittelwert: 6.4  CPU_temp: 29.9 C  T: 9.34 P: 1022.3 Hm: 97.0 F: -0.05
-2021-11-19 02:20:26 n=: 8260 Mittelwert: 6.4  CPU_temp: 30.4 C  T: 9.29 P: 1022.4 Hm: 97.0 F: 0.08
-2021-11-19 02:40:25 n=: 9440 Mittelwert: 6.4  CPU_temp: 31.5 C  T: 9.31 P: 1022.4 Hm: 97.0 F: -0.36
-2021-11-19 03:00:24 n=: 10620 Mittelwert: 6.3  CPU_temp: 30.4 C  T: 9.35 P: 1022.5 Hm: 97.0 F: 0.2
-2021-11-19 03:20:24 n=: 11800 Mittelwert: 6.6  CPU_temp: 29.9 C  T: 9.44 P: 1022.4 Hm: 97.0 F: 0.16
-2021-11-19 03:40:23 n=: 12980 Mittelwert: 6.3  CPU_temp: 30.9 C  T: 9.44 P: 1022.4 Hm: 97.0 F: -0.39
-2021-11-19 04:00:22 n=: 14160 Mittelwert: 5.9  CPU_temp: 30.4 C  T: 9.42 P: 1022.5 Hm: 97.0 F: 0.05
-2021-11-19 04:20:22 n=: 15340 Mittelwert: 5.9  CPU_temp: 31.5 C  T: 9.48 P: 1022.5 Hm: 97.0 F: 0.05
-2021-11-19 04:40:22 n=: 16520 Mittelwert: 5.9  CPU_temp: 31.5 C  T: 9.56 P: 1022.5 Hm: 97.0 F: 0.04
-2021-11-19 05:00:21 n=: 17700 Mittelwert: 5.9  CPU_temp: 30.9 C  T: 9.66 P: 1022.3 Hm: 97.0 F: -0.07
-2021-11-19 05:20:21 n=: 18880 Mittelwert: 5.8  CPU_temp: 30.4 C  T: 9.75 P: 1022.2 Hm: 97.0 F: -0.02
-2021-11-19 05:40:20 n=: 20060 Mittelwert: 5.8  CPU_temp: 31.5 C  T: 9.83 P: 1022.2 Hm: 97.0 F: -0.1
-2021-11-19 06:00:20 n=: 21240 Mittelwert: 5.8  CPU_temp: 30.9 C  T: 9.99 P: 1022.2 Hm: 97.0 F: 0.22
-2021-11-19 06:20:19 n=: 22420 Mittelwert: 6.0  CPU_temp: 30.9 C  T: 9.95 P: 1022.2 Hm: 97.0 F: 0.14
-2021-11-19 06:40:19 n=: 23600 Mittelwert: 6.1  CPU_temp: 30.4 C  T: 9.93 P: 1022.3 Hm: 97.0 F: -0.02
-2021-11-19 07:00:24 n=: 24780 Mittelwert: 6.1  CPU_temp: 31.5 C  T: 9.97 P: 1022.3 Hm: 97.0 F: 0.0
-2021-11-19 07:20:23 n=: 25960 Mittelwert: 6.0  CPU_temp: 32.6 C  T: 9.91 P: 1022.4 Hm: 97.0 F: 0.05

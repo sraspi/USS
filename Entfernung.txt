@@ -1,6 +1,2 @@
 ---------------------------------------------
-2021-11-18 19:13:59 started  n=: 0: Ventil OFF!!!   CPU_temp: 33.1C
-2021-11-18 19:34:39 n=: 1180: Ventil OFF!!!  Distanz: 5.9  CPU_temp: 30.9C F: -0.04
----------------------------------------------
-2021-11-18 23:59:50 started  n=: 0: Ventil OFF!!!   CPU_temp: 32.0C
-2021-11-19 00:20:25 n=: 1180: Ventil OFF!!!  Distanz: 6.5  CPU_temp: 29.9C F: -0.09
+2021-11-20 16:04:45 started  n=: 0: Ventil winter_ON!!!   CPU_temp: 34.2C

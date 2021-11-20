@@ -1,4 +1,4 @@
-123#im richtigen Ordner: 
+#from USS 20211120#im richtigen Ordner: 
 sudo apt-get install git
 git init
 ls -a
