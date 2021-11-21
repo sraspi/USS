@@ -15,8 +15,10 @@ eval "$(ssh-agent -s)"                                       # ssh agent starten
 ssh-add ~/.ssh/id_ed25519                                    #key dem keyagent hinzufügen
 nano id_ed25519.pub                                          #key kopieren und dann bei githaub hinzufügen
 
-git remote add origin git@github.com:sraspi/USS.git
+
 git clone git@github.com:sraspi/USS.git /home/pi/US-Sensor
+git remote add origin git@github.com:sraspi/USS.git
+cd US-Sensor && git push -u origin master
 git add --all
 git commit -am "text"
 git push --all
@@ -34,7 +36,7 @@ git log datei.txt
 git checkout 5fd772a292c019a7cf3012b1156685280d4a7d2d datei.txt
 git commit -am 'restore irgendwas'
 
-git push -u origin master
+
 
 #anschließend:
 git pull --all  # holt Änderung aus github
