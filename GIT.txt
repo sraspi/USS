@@ -1,4 +1,4 @@
-#from GITHUB(Test-Pi checked)  2021121 im richtigen Ordner: 
+#from USS  2021121 im richtigen Ordner: 
 sudo apt-get install git
 git init
 ls -a
