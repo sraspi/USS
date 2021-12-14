@@ -7,4 +7,15 @@
 - pip3 istalliert
 - smbus und smbus2 via pip3
 - pip install RPi.bme280
+- für Email: NICHT!!!(pip3 install numpy, pip3 uninstall numpy) sondern:sudo apt-get install python3-numpy
+- NAS:sudo apt install samba cifs-utils
+      mkdir ~/NAS
+      /home/pi/NAS/                   nano ~/.smbcredentials
+                                              username=sraspi
+                                              password=StJ19raspbian
+- etc/fstab ergänzen: 
+  //192.168.178.1/FRITZ.NAS/ /home/pi/NAS cifs credentials=/home/pi/.smbcredentials,vers=3.0,noserverino,uid=1000,gid=1000,x-systemd.automount,x-systemd.requires=network-online.target 0 0
+- crontab ergänzen:
+- @reboot sleep 120 && mount -a
+
 - lÃ¤uft ab 13.12.2021

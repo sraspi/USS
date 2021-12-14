@@ -1,8 +1,4 @@
 
-Reboot 2021-12-13 16:13:38 USS4.6w.py started16<D<11; Dm>55 and write F,n=116 t=20min
+Reboot 2021-12-14 16:00:13 USS4.7w.py started16<D<11; Dm>55 and write F,n=116 t=20min
 
-2021-12-13 16:34:02 n=: 1180 Mittelwert: 80.5  CPU_temp: 30.9 C  T: 9.03 P: 1021.4 Hm: 97.0 F: 0.05
-2021-12-13 16:54:07 n=: 2360 Mittelwert: 80.6  CPU_temp: 30.9 C  T: 8.99 P: 1021.2 Hm: 97.0 F: 0.25
-2021-12-13 17:14:11 n=: 3540 Mittelwert: 80.5  CPU_temp: 29.3 C  T: 8.77 P: 1021.2 Hm: 97.0 F: 0.01
-2021-12-13 17:34:16 n=: 4720 Mittelwert: 80.5  CPU_temp: 29.3 C  T: 8.61 P: 1021.3 Hm: 97.0 F: -0.07
-2021-12-13 17:54:20 n=: 5900 Mittelwert: 80.2  CPU_temp: 29.3 C  T: 8.5 P: 1021.2 Hm: 97.0 F: 0.02
+2021-12-14 16:20:43 n=: 1180 Mittelwert: 80.4  CPU_temp: 31.5 C  T: 9.09 P: 1021.2 Hm: 97.0 F: 0.21
