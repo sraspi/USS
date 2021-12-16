@@ -242,7 +242,7 @@ try:
         Dm = Dg/(z+1)
         Tm = Tg/(z+1) + 0.3
         Pm = Pg/(z+1) + 21
-        Hm = Hg/(z+1) - 3
+        Hm = Hg/(z+1) 
 
         print(("D: "), round(D[z], 1))
         print("T:", round((temperature + 0.1),2))
@@ -276,8 +276,8 @@ try:
 
 
             if R_on and Dm > 16: #wenn Dm > 16cm und R_on (also vorher auf OFF) dann Ventil ON
-               # print("Ventil winter_OFF")
-               # GPIO.output(22, GPIO.LOW)
+                print("Ventil winter_OFF")
+                GPIO.output(22, GPIO.LOW)
                 Datum = time.strftime("%Y-%m-%d %H:%M:%S")
                 cpu = CPUTemperature()
                 fobj_out = open(filename,"a")

@@ -1,4 +1,4 @@
-
+--
 Reboot 2021-05-03 12:14:20 USS4.1.py started16<D<11; F<35 and write F,n=116 t=20min
 
 2021-05-03 12:34:41 n=: 1180 Mittelwert: 30.4  CPU_temp: 33.6 C  T: 16.45 P: 1019.2 Hm: 35.6 F: -0.45
