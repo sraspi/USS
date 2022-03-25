@@ -2,3 +2,6 @@
 inkl. NAS und Emails, Fass und INC leer!
 
 
+---------------------------------------------
+2022-03-25 16:51:48 started  n=: 0: Ventil winter_ON!!!   CPU_temp: 38.5C
+2022-03-25 16:52:43 n=: 30: Ventil winter_OFF!!!  Distanz: 61.6 CPU_temp: 36.9C F: -2.9

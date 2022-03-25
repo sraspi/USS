@@ -321,7 +321,7 @@ try:
 
         if NAS:
             try:
-                f = open("/home/pi/NAS1/error.log", "a") 
+                f = open("/home/pi/NAS/error.log", "a") 
                 f.write("2")
                 f.close()
                 print("NAS 2 written")
