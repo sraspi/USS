@@ -250,10 +250,8 @@ try:
         print("H", round((humidity), 2))
         print(("z: "),  z)
 
-        if z > 1:# bereinigter Mittelwert aus 116*50 US-Messungen wird gespeichert
+        if z > 1: # bereinigter Mittelwert aus 116*50 US-Messungen wird gespeichert
             print()
-            if Tm < 1:
-                print("-----Tm: ", Tm)
             print()
             print("----------------------------------------- n: ", d, "Mittelwert: ", round(Dm, 1))
             Vt_end = time.time()
@@ -322,11 +320,21 @@ try:
             z = z + 1
 
         if NAS:
-            f = open("/home/pi/NAS/error.log", "a") 
-            f.write("2")
-            f.close()
-            print("NAS 2 written")
-            NAS = False
+            try:
+                f = open("/home/pi/NAS1/error.log", "a") 
+                f.write("2")
+                f.close()
+                print("NAS 2 written")
+                NAS = False
+            except:
+                print("NAS not mounted, error")
+                Datum = time.strftime("%Y-%m-%d %H:%M:%S")
+                cpu = CPUTemperature()
+                fobj_out = open(filename,"a")
+                fobj_out.write('\n' + "---------------------------NAS not mounted, error!  " + Datum + " n=: " + str(d) + " CPU_temp: " + str(round(cpu.temperature, 1)) + '\n')
+                fobj_out.close()
+
+
         c_write()
 
 except KeyboardInterrupt:
