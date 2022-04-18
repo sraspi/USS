@@ -1,8 +1,8 @@
-2021_12_13: 4GB-SD-Karte defekt, wiederholte Ausfälle des Pi wegen Schreib/Lesefehlern.
+2021_12_13: USS 4GB-SD-Karte defekt, wiederholte Ausfaelle des Pi wegen Schreib/Lesefehlern.
 - 32GB-Karte mit rpi-imager erstellt(inkl ssh und WLAN Fritzbox Keller)
-- git installiert, ssh installiert und über git clone.... alles von USS aus github geclont
+- git installiert, ssh installiert und ueber git clone.... alles von USS aus github geclont
 - erster Schritt war dann git add --all, git commit -am "text", git push --all
-- noip installiert, crontab Einträge aus cron.uss übernommen
+- noip installiert, crontab Einträge aus cron.uss uebernommen
 - Ordner NAS und data erstellt
 - pip3 istalliert
 - smbus und smbus2 via pip3
@@ -18,4 +18,14 @@
 - crontab erg�nzen:
 - @reboot sleep 120 && mount -a
 
-- läuft ab 13.12.2021
+Power saving OFF:
+sudo nano /etc/network/interfaces
+allow-hotplug wlan0
+iface wlan0 inet manual
+post-up iw dev wlan0 set power_save off
+
+
+- laeuft ab 13.12.2021
+-USS nach Spannungsunterbrechung(wifi-Adapter Nano zu LC) neuer, kostenloser Ersatz-Pizero_W defekt, wifi(USS), erster Zero_W war doch nicht defekt(wifi).
+18.04.22 neu aufgesetzt mit neuem Nano s.o.
+
