@@ -11,10 +11,11 @@ from email import encoders
 from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+import wifi
 #errorcontent = "OK"
 
 while True:
-
+    
     f = open("/home/pi/NAS/error.log", "r")
     data = f.read()
     data = [int(i) for i in data]
@@ -66,7 +67,7 @@ while True:
         Betreff = str("USS_Pi_control")
         sender_email = "sraspi21@gmail.com"
         receiver_email = "stefan.taubert.apweiler@gmail.com"
-        password = "StJ19gmail"
+        password = "rwnqyynanebneqbj"
         #password = input("Type your password and press enter:")
 
         # Create a multipart message and set headers
