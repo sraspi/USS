@@ -1,0 +1,1 @@
+2022-04-20 07:22:34 keyboard.interrupt:  n: 1 CPU_temp: 25.02C Mw: 16.423000000000002

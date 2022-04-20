@@ -42,7 +42,7 @@ print("W:", W)
 try:
     timestr = time.strftime("%Y%m%d_%H%M%S")
     fobj_out = open("/home/pi/NAS/USS.log",  "a" )
-    fobj_out.write("\n" + "\n" + time.strftime("%Y-%m-%d %H:%M:%S") + "     t: "  + "W:" + str(W) + '\n' )
+    fobj_out.write("\n" + "\n" + time.strftime("%Y-%m-%d %H:%M:%S") + "     t: "  + "USS5.0 started ,W:" + str(W) + '\n' )
     fobj_out.close()
 except:
     timestr = time.strftime("%Y%m%d_%H%M%S")
