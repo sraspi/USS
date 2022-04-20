@@ -31,7 +31,7 @@ message["Bcc"] = receiver_email  # Recommended for mass emails
 # Add body to email
 message.attach(MIMEText(Inhalt, "plain"))
 
-filename = "/home/pi/US-Sensor/Entfernung.txt" # In same directory as script
+filename = "/home/pi/data/Entfernung.txt" # In same directory as script
    
 # Open PDF file in binary mode  
 with open(filename, "rb") as attachment:

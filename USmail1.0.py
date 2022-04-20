@@ -16,7 +16,7 @@ from email.mime.text import MIMEText
 x1 = []
 x2 = []
 x3 = []
-Dateiname = "/home/pi/US-Sensor/logfile.txt"
+Dateiname = "/home/pi/data/logfile.txt"
 
 while True:
 #E-Mail an stefan.taubert.apweiler@gmail.com:

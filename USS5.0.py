@@ -112,10 +112,22 @@ def c_write():
             f = open("/home/pi/US-Sensor/check.txt", "w")
             f.write(str(t_mail))
             f.close()
-            if t_mail == 20: #from USS
-                subprocess.call("/home/pi/US-Sensor/USmail.sh")
             if t_mail == 6:
                 subprocess.call("/home/pi/US-Sensor/USmail.sh")
+            if t_mail == 7:
+                subprocess.call("/home/pi/US-Sensor/USmail.sh")
+            if t_mail == 8:
+                subprocess.call("/home/pi/US-Sensor/USmail.sh")
+            if t_mail == 14:
+                subprocess.call("/home/pi/US-Sensor/USmail.sh")
+            if t_mail == 18:
+                subprocess.call("/home/pi/US-Sensor/USmail.sh")
+            if t_mail == 22:
+                subprocess.call("/home/pi/US-Sensor/USmail.sh")
+
+
+
+
             v[x] = False
             
 R_on = True
