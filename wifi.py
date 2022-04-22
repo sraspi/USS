@@ -11,7 +11,7 @@ def p(W):
     try:
         WLAN = 0
         W = 0
-        while W < 3 and WLAN == 0:
+        while W < 10 and WLAN == 0:
             time.sleep(1)
             print(W)
             

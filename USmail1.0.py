@@ -57,7 +57,7 @@ while True:
   # Add body to email
   message.attach(MIMEText(Inhalt, "plain"))
 
-  filename = "/home/pi/US-Sensor/logfile.txt" # In same directory as script
+  filename = "/home/pi/data/logfile.txt" # In same directory as script
        
   # Open PDF file in binary mode
   with open(filename, "rb") as attachment:
