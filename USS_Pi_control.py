@@ -11,11 +11,12 @@ from email import encoders
 from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
-import wifi
+
 #errorcontent = "OK"
 
 while True:
     
+   
     f = open("/home/pi/NAS/error.log", "r")
     data = f.read()
     data = [int(i) for i in data]

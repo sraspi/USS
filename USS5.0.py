@@ -11,7 +11,7 @@ import datetime
 import sys
 import os
 from gpiozero import CPUTemperature
-import wifi # wird einmal ausgeführt!
+
 
 
 
@@ -139,7 +139,7 @@ print()
 Datum = time.strftime("%Y-%m-%d %H:%M:%S")
 
 fobj_out = open(logfile,"a")
-fobj_out.write('\n' +  "Reboot " +  Datum + " USS5.0.py incl. recon.sh started" + "16<D<11; Dm>55 and write F,n=116 t=20min"+ '\n' + '\n')
+fobj_out.write('\n' +  "Reboot " +  Datum + " USS5.0.py incl. recon.sh started: 3,3L/cm" + "16<D<11; Dm>55 and write F,n=116 t=20min"+ '\n' + '\n')
 fobj_out.close()
 
 print("Ventil OFF")
@@ -350,7 +350,7 @@ try:
         
 
 except KeyboardInterrupt:
-    fobj_out = open("/home/pi/US-Sensor/logfile.txt","a")
+    fobj_out = open("/home/pi/data/logfile.txt","a")
     fobj_out.write(Datum + " keyboard.interrupt: " + " n: " + str(n) + " CPU_temp: " + str(cpu.temperature) + "C" + " Mw: " + str(mw) + '\n')
     fobj_out.close()
     print("process terminated")
