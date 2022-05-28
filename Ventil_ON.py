@@ -134,19 +134,19 @@ R_on = True
 R_off = True
 mail = True
 
-print("USS5.1.py started")
+print("USS5.2.py started")
 print()
 Datum = time.strftime("%Y-%m-%d %H:%M:%S")
 
 fobj_out = open(logfile,"a")
-fobj_out.write('\n' +  "Reboot " +  Datum + " USS5.1.py: 3,3L/cm" + "40<Dm>45, IBC-leer , write, F(mm/min) n=116 t=20min"+ '\n' + '\n')
+fobj_out.write('\n' +  "Reboot " +  Datum + " USS5.2.py: 3,3L/cm" + "16<D<11;   Dm>42 IBC-leer , write F(mm/min) n=116 t=20min"+ '\n' + '\n')
 fobj_out.close()
 
-print("Ventil OFF")
-GPIO.output(22, GPIO.LOW)
+print("Ventil ON")
+GPIO.output(22, GPIO.HIGH)
 cpu = CPUTemperature()
 fobj_out = open(filename,"a")
-fobj_out.write("---------------------------------------------" + '\n' + Datum + " started " + " n=: " + str(d) + ": Ventil OFF" +" CPU_temp: " + str(round(cpu.temperature,1)) + "C"  + '\n' + '\n' )
+fobj_out.write("---------------------------------------------" + '\n' + Datum + " started " + " n=: " + str(d) + ": Ventil ON" +" CPU_temp: " + str(round(cpu.temperature,1)) + "C"  + '\n' + '\n' )
 fobj_out.close()
 time.sleep(2)
 #subprocess.call("/home/pi/US-Sensor/mail_on.sh")
@@ -266,7 +266,7 @@ try:
 
             
 
-            if Dm > 60 and mail: #  ibc leer 
+            if Dm > 40 and mail: #  ibc leer 
                   print("Email IBC leer!")
                   subprocess.call("/home/pi/US-Sensor/mail_ibc.sh")
                   print()
@@ -283,7 +283,7 @@ try:
                  
                   
 
-            if R_on and Dm > 45:#wenn Dm > 45 cm und R_on (also vorher auf OFF) dann Ventil ON
+            if R_on and Dm > 55: #wenn Dm > 16cm und R_on (also vorher auf OFF) dann Ventil ON
                 print("Ventil ON")
                 GPIO.output(22, GPIO.HIGH)
                 Datum = time.strftime("%Y-%m-%d %H:%M:%S")
@@ -298,13 +298,13 @@ try:
               
                    
 
-            if R_off and Dm < 40:#wenn DM < 11cm und R_off (also vorher auf ON) dann Ventil OFF
+            if R_off and Dm < 50:  #wenn DM < 11cm und R_off (also vorher auf ON) dann Ventil OFF
                 print("Ventil OFF")
-                GPIO.output(22, GPIO.LOW)
+                GPIO.output(22, GPIO.HIGH)
                 Datum = time.strftime("%Y-%m-%d %H:%M:%S")
                 cpu = CPUTemperature()
                 fobj_out = open(filename,"a")
-                fobj_out.write(Datum + " n=: " + str(d) +  ": Ventil OFF!!!  " + "Distanz: " +  str(round(mw,1)) + "  CPU_temp: " + str(round(cpu.temperature, 1)) + "C" + " F(mm/min): "+ str(round(F,2)) + '\n' + '\n' )
+                fobj_out.write(Datum + " n=: " + str(d) +  ": Ventil ON" + "Distanz: " +  str(round(mw,1)) + "  CPU_temp: " + str(round(cpu.temperature, 1)) + "C" + " F(mm/min: "+ str(round(F,2)) + '\n' + '\n' )
                 fobj_out.close()
                 subprocess.call("/home/pi/US-Sensor/mail_off.sh")
                 R_on = True
@@ -314,7 +314,7 @@ try:
             Datum = time.strftime("%Y-%m-%d %H:%M:%S")
             cpu = CPUTemperature()
             fobj_out = open(logfile,"a")
-            fobj_out.write(Datum + " n=: " + str(d) + " Mittelwert: " +  str(round(Dm, 1))+ "  CPU_temp: " + str(round(cpu.temperature, 1)) + " C " + " T: " + str(round(Tm, 2)) + " P: " + str(round(Pm, 1)) + " Hm: " + str(round(Hm,1)) + " F(mm/min): " + str(round(F,2)) + '\n' + '\n' )
+            fobj_out.write(Datum + " n=: " + str(d) + " Mittelwert: " +  str(round(Dm, 1))+ "  CPU_temp: " + str(round(cpu.temperature, 1)) + " C " + " T: " + str(round(Tm, 2)) + " P: " + str(round(Pm, 1)) + " Hm: " + str(round(Hm,1)) + " F(mm/min: " + str(round(F,2)) + '\n' + '\n' )
             fobj_out.close()
             
             z = 0
