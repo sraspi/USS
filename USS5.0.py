@@ -139,7 +139,7 @@ print()
 Datum = time.strftime("%Y-%m-%d %H:%M:%S")
 
 fobj_out = open(logfile,"a")
-fobj_out.write('\n' +  "Reboot " +  Datum + " USS5.0.py: 3,3L/cm" + "16<D<11;   Dm>42 IBC-leer , write F,n=116 t=20min"+ '\n' + '\n')
+fobj_out.write('\n' +  "Reboot " +  Datum + " USS5.0.py: 3,3L/cm" + "36>Dm>30   Dm>42 IBC-leer , write F,n=116 t=20min"+ '\n' + '\n')
 fobj_out.close()
 
 print("Ventil OFF")
@@ -283,7 +283,7 @@ try:
                  
                   
 
-            if R_on and Dm > 16: #wenn Dm > 16cm und R_on (also vorher auf OFF) dann Ventil ON
+            if R_on and Dm > 36: #wenn Dm > 16cm und R_on (also vorher auf OFF) dann Ventil ON
                 print("Ventil ON")
                 GPIO.output(22, GPIO.HIGH)
                 Datum = time.strftime("%Y-%m-%d %H:%M:%S")
@@ -297,7 +297,7 @@ try:
               
                    
 
-            if R_off and Dm < 11:  #wenn DM < 11cm und R_off (also vorher auf ON) dann Ventil OFF
+            if R_off and Dm < 30: #wenn DM < 11cm und R_off (also vorher auf ON) dann Ventil OFF
                 print("Ventil OFF")
                 GPIO.output(22, GPIO.LOW)
                 Datum = time.strftime("%Y-%m-%d %H:%M:%S")
