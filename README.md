@@ -29,3 +29,6 @@ post-up iw dev wlan0 set power_save off
 -USS nach Spannungsunterbrechung(wifi-Adapter Nano zu LC) neuer, kostenloser Ersatz-Pizero_W defekt, wifi(USS), erster Zero_W war doch nicht defekt(wifi).
 18.04.22 neu aufgesetzt mit neuem Nano s.o.
 
+08.10.2022:
+kein automatischer Reboot um Mitternacht! Software läuft nun24/7, entsprechend crontab geändert und USS5.1.py
+

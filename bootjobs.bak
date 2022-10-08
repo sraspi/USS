@@ -7,7 +7,9 @@ cd
 #sleep 30
 sudo mount -a
 echo "NAS mounted"
-cd /home/pi/US-Sensor
+cd /home/pi/US-Sensor/
+sh filecopy.sh
+rm /home/pi/data/logfile.txt
 sh US-launcher.sh 
 
 
