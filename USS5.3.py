@@ -124,7 +124,7 @@ def c_write():
                 subprocess.call("/home/pi/US-Sensor/USmail.sh")
             if t_mail == 18:
                 subprocess.call("/home/pi/US-Sensor/USmail.sh")
-            if t_mail == 22:
+            if t_mail == 20:
                 subprocess.call("/home/pi/US-Sensor/USmail.sh")
 
 
@@ -136,12 +136,12 @@ R_on = True
 R_off = True
 mail = True
 
-print("USS5.2.py started")
+print("USS5.3.py started")
 print()
 Datum = time.strftime("%Y-%m-%d %H:%M:%S")
 
 fobj_out = open(logfile,"a")
-fobj_out.write('\n' +  "Reboot " +  Datum + " USS5.2.py: 3,3L/cm" + "36>Dm>30   Dm>42 IBC-leer , write F,n=116 t=20min"+ '\n' + '\n')
+fobj_out.write('\n' +  "Reboot " +  Datum + " USS5.3.py: 3,3L/cm" + "36>Dm>30   Dm>42 IBC-leer , write F,n=116 t=20min"+ '\n' + '\n')
 fobj_out.close()
 
 print("Ventil OFF")
@@ -155,16 +155,16 @@ time.sleep(2)
 Vt_start = time.time()
 tm_start = time.time()
 
-th = datetime.datetime.now()  
-t_mail = th.hour
-f = open("/home/pi/US-Sensor/check.txt", "w")       #write str(t.hour to check.txt)
-f.write(str(t_mail))
-f.close()
 
 try:
    
     while True:
- 
+        th = datetime.datetime.now()  
+        t_mail = th.hour
+        f = open("/home/pi/US-Sensor/check.txt", "w")       #write str(t.hour to check.txt)
+        f.write(str(t_mail))
+        f.close()
+
 
         #Lueftersteuerung cpu:
         GPIO.output(27, GPIO.HIGH) #Luefter
@@ -338,25 +338,21 @@ try:
         else:
             z = z + 1
             
-    c_write()         
-    if t_mail == 22:
-        NAS == True
+        c_write()         
+        if t_mail == 22:
+            NAS == True
         
-    th = datetime.datetime.now()  
-    t_mail = th.hour
-    f = open("/home/pi/US-Sensor/check.txt", "w")       #write str(t.hour to check.txt)
-    f.write(str(t_mail))
-    f.close()
+   
         
-    if NAS and t_mail == 0:                     
-        try:
-            f = open("/home/pi/NAS/error.log", "a") 
-            f.write("2")
-            f.close()
-            print("NAS 2 written")
-            NAS = False
-        except:
-            print("NAS-error")
+        if NAS and t_mail == 0:                   
+            try:
+                f = open("/home/pi/NAS/error.log", "a") 
+                f.write("2")
+                f.close()
+                print("NAS 2 written")
+                NAS = False
+            except:
+                print("NAS-error")
                 
 
 except KeyboardInterrupt:
