@@ -1,4 +1,4 @@
 @reboot cd /home/pi/US-Sensor && sh bootjobs.sh
 00 30 * * * cd /home/pi/US-Sensor  && ./USS_Pi_control.sh
-#59 23 * * * sudo reboot now
-59 23 * * * cd /home/pi/US-Sensor/ && sh filecopy.sh && rm /home/pi/data/logfil
+59 23 * * * sudo reboot now
+59 23 * * * cd /home/pi/US-Sensor/ && sh filecopy.sh && rm /home/pi/data/logfile.txt
