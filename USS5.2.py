@@ -153,11 +153,11 @@ fobj_out = open(logfile,"a")
 fobj_out.write('\n' +  "Reboot " +  Datum + " USS5.2.py: 3,3L/cm" + "36>Dm>30   Dm>42 IBC-leer , write F,n=116 t=20min"+ '\n' + '\n')
 fobj_out.close()
 
-print("Ventil OFF")
-GPIO.output(22, GPIO.LOW)
+print("Ventil ON")
+GPIO.output(22, GPIO.HIGH)
 cpu = CPUTemperature()
 fobj_out = open(filename,"a")
-fobj_out.write("---------------------------------------------" + '\n' + Datum + " started " + " n=: " + str(d) + ": Ventil OFF" +" CPU_temp: " + str(round(cpu.temperature,1)) + "C"  + '\n')
+fobj_out.write("---------------------------------------------" + '\n' + Datum + " started " + " n=: " + str(d) + ": Ventil ON" +" CPU_temp: " + str(round(cpu.temperature,1)) + "C"  + '\n')
 fobj_out.close()
 time.sleep(2)
 Vt_start = time.time()
@@ -265,13 +265,13 @@ try:
         print("H", round((humidity - 3), 2))
         print(("z: "),  z)
 
-        if z > 1: # bereinigter Mittelwert aus 116*50 US-Messungen wird gespeichert
+        if z > 116: # bereinigter Mittelwert aus 116*50 US-Messungen wird gespeichert
             print()
             print()
             print("----------------------------------------- n: ", d, "Mittelwert: ", round(Dm, 1))
             Vt_end = time.time()
             Vt_diff = (Vt_end - Vt_start)
-            E = D[1]-D[0]
+            E = D[116]-D[0]
             F = (0.0000000001+E)/Vt_diff*10*60
             print("F:", F, " mm/min")
 
@@ -320,7 +320,7 @@ try:
                 Datum = time.strftime("%Y-%m-%d %H:%M:%S")
                 cpu = CPUTemperature()
                 fobj_out = open(filename,"a")
-                fobj_out.write(Datum + " n=: " + str(d) +  ": Ventil OFF!!!  " + "Distanz: " +  str(round(mw,1)) + "  CPU_temp: " + str(round(cpu.temperature, 1)) + "C" + " F: "+ str(round(F,2)) + '\n')
+                fobj_out.write(Datum + " n=: " + str(d) +  ": Ventil OFF!  " + "Distanz: " +  str(round(mw,1)) + "  CPU_temp: " + str(round(cpu.temperature, 1)) + "C" + " F: "+ str(round(F,2)) + '\n')
                 fobj_out.close()
                 pingstatus = ps1.ps(pingstatus)
                 if pingstatus =="Network Active":

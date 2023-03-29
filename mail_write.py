@@ -18,7 +18,7 @@ Inhalt = ("ver. USS4.4.py")
 Betreff = str("Abstand exakt 1 h???")
 sender_email = "sraspi21@gmail.com"
 receiver_email = "sraspi21@gmail.com"
-password = "rwnqyynanebneqbj"
+password = "wphdfzdmmqqgaxak"
 #password = input("Type your password and press enter:")
 
 # Create a multipart message and set headers

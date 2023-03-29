@@ -18,7 +18,7 @@ Inhalt = ("Entfernung.txt")
 Betreff = str("mail_on!!!")
 sender_email = "sraspi21@gmail.com"
 receiver_email = "sraspi21@gmail.com"
-password = "rwnqyynanebneqbj"
+password = "wphdfzdmmqqgaxak"
 #password = input("Type your password and press enter:")
 
 # Create a multipart message and set headers
