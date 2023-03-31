@@ -12,13 +12,17 @@ from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
+#get pw
+s = open("/home/pi/PW.txt", "r")
+pw = s.read()
+s.close()
 
 #E-Mail an sraspi21@gmail.com:
 Inhalt = ("ver. USS4.4.py")
 Betreff = str("Abstand exakt 1 h???")
 sender_email = "sraspi21@gmail.com"
 receiver_email = "sraspi21@gmail.com"
-password = "wphdfzdmmqqgaxak"
+password = pw
 #password = input("Type your password and press enter:")
 
 # Create a multipart message and set headers

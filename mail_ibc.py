@@ -14,11 +14,16 @@ from email.mime.text import MIMEText
 
 
 #E-Mail an sraspi21@gmail.com:
+#get pw
+s = open("/home/pi/PW.txt", "r")
+pw = s.read()
+s.close()
+
 Inhalt = ("Entfernung.txt")
 Betreff = str("IBC leer!!!")
 sender_email = "sraspi21@gmail.com"
 receiver_email = "sraspi21@gmail.com"
-password = "wphdfzdmmqqgaxak"
+password = pw
 #password = input("Type your password and press enter:")
 
 # Create a multipart message and set headers

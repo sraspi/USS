@@ -1,4 +1,7 @@
-#from USS  2021121 im richtigen Ordner: 
+31.03.2023:
+pw deleted , alles entsprechend geändert(pw aus PW.txt)
+
+from USS  2021121 im richtigen Ordner: 
 sudo apt-get install git
 git init
 ls -a

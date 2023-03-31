@@ -18,6 +18,11 @@ x2 = []
 x3 = []
 Dateiname = "/home/pi/data/logfile.txt"
 
+#get pw
+s = open("/home/pi/PW.txt", "r")
+pw = s.read()
+s.close()
+
 while True:
 #E-Mail an stefan.taubert.apweiler@gmail.com:
 
@@ -44,7 +49,7 @@ while True:
   Betreff = (t + p +h)
   sender_email = "sraspi21@gmail.com"
   receiver_email = "stefan.taubert.apweiler@gmail.com"
-  password = "wphdfzdmmqqgaxak"
+  password = pw
   #password = input("Type your password and press enter:")
 
   # Create a multipart message and set headers
